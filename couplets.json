@@ -1,37 +1,45 @@
 [
   {
-    "couplets":[
+    "couplets": [
       {
-        "id" : 1,
-        "title" : "Name 1"
+        "id": 1,
+        "title_tam": "கடவுள் வாழ்த்து",
+        "title_eng": "The Praise of God"
       },
       {
-        "id" : 2,
-        "title" : "Name 1"
+        "id": 2,
+        "title_tam": "கடவுள் வாழ்த்து",
+        "title_eng": "The Praise of God The Praise of God The Praise of God"
       },
       {
-        "id" : 3,
-        "title" : "Name 1"
+        "id": 3,
+        "title_tam": "Name 1",
+        "title_eng": "Name 2"
       },
       {
-        "id" : 4,
-        "title" : "Name 1"
+        "id": 4,
+        "title_tam" : "Name 1",
+        "title_eng" : "Name 2"
       },
       {
-        "id" : 5,
-        "title" : "Name 1"
+        "id": 5,
+        "title_tam" : "Name 1",
+        "title_eng" : "Name 2"
       },
       {
-        "id" : 6,
-        "title" : "Name 1"
+        "id": 6,
+        "title_tam" : "Name 1",
+        "title_eng" : "Name 2"
       },
       {
-        "id" : 7,
-        "title" : "Name 1"
+        "id": 7,
+        "title_tam" : "Name 1",
+        "title_eng" : "Name 2"
       },
       {
-        "id" : 8,
-        "title" : "Name 1"
+        "id": 8,
+        "title_tam" : "Name 1",
+        "title_eng" : "Name 2"
       }
     ]
   }

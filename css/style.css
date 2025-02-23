@@ -12,7 +12,7 @@
 
 /* Tamil Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   margin: 0;
@@ -26,6 +26,7 @@ body {
   font-family: "Lato", sans-serif;
   color: #000;
   overflow-x: hidden;
+  background: linear-gradient(60deg, whitesmoke, #d2f8f6);
 }
 
 html {
@@ -188,59 +189,151 @@ nav button {
   background-image: linear-gradient(315deg, #f6fba2 0%, #20ded3 74%);
 }
 
+/*
+
+- SPACING SYSTEM (px)
+
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+- FONT SIZE SYSTEM (px)
+
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+*/
 
 /**********************************/
 /*********** ATHIKARAM ************/
 /**********************************/
 
-.kural{
+.kural {
   width: 1300px;
-  margin: 100px auto;
-  background-color: #00bf8c;
+  margin: 80px auto 0 auto;
 }
-.format{
+.format {
   display: grid;
   grid-template-columns: 1fr 3fr;
   padding: 24px;
   gap: 32px;
 }
 
+.couplets-navbar {
+  margin-bottom: 32px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  background: white;
+  padding: 5px 12px;
+  border-radius: 30px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.075);
+}
+
+#couplets-search-icon[name="search-alt-2"],
+#kural-search-icon[name="search-alt-2"]{
+  height: 22px;
+  width: 22px;
+}
+
+#couplets-search-bar {
+  width: 250px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+#couplets-search-bar:active {
+  outline-color: #424890;
+}
+
+.couplets-sets {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  row-gap: 10px;
+  height: 370px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.couplets-set-format {
+  display: flex;
+  gap: 7px;
+  padding: 12px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+/* .couplets-click{
+  display: inline-block;
+} */
+
+.couplets {
+  text-align: justify;
+  font-size: 14px;
+}
+
+.heading {
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: #000;
+}
 
 /**********************************/
 /******** KURAL_CONTAINER *********/
 /**********************************/
 
-.kural-navbar{
+.kural-navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 600px;
-  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.kural-title {
+  font-size: 24px;
+  margin-left: 70px;
+  text-transform: uppercase;
+}
+
+.kural-search{
   margin-bottom: 32px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  background: white;
+  padding: 5px 12px;
+  border-radius: 30px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.07);
 }
 
-.kural-title{
-   font-size: 24px;
-  }
-
-.kural-search-bar{
-  display: inline-block;
+.kural-search-bar {
+  width: 350px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
 }
 
-.kural-container-inner{
+.kural-container-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-.kural-meaning{
+.kural-sets{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.kural-meaning {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-
-
 
 /* *********************** */
 /* ******** COMMON ******* */
@@ -249,6 +342,17 @@ nav button {
 .nav-menu:hover,
 .rules-menu:hover {
   color: white;
+}
+
+/******** CENTER_ALIGN ********/
+.center {
+  text-align: center;
+}
+
+/******** MARGIN_CENTER ********/
+
+.mar-center{
+  margin: 0 auto;
 }
 
 /* ***** End Of Common ***** */
