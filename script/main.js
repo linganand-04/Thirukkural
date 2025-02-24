@@ -132,24 +132,29 @@ function showKural() {
   console.log("Hii");
 }
 
-// const kural = document.querySelector(".kural-def");
+const kural = document.querySelector(".kural-def");
 
-// fetch("./couplets.json")
-//   .then((res) => res.json())
-//   .then((data) => {
-//     const thirukkural = data[0].kural;
-    
-//     kural.forEach((post) => {
-//       couplets.insertAdjacentHTML(
-//         "beforeend",
-//         `
-//         <div class="couplets-set-format">
-//         <span class="couplets-no">${post.id}.</span>
-//           <div class="couplets-name">
-//             <p class="couplets">${post.tamil_1} / ${post.tamil_2}</p>
-//           </div>
-//         </div>
-//         `
-//       );
-//     });
-//   });
+fetch("./kural.json")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data[0].thirukkural);
+    const thirukkural = data[0].thirukkural;
+    console.log(thirukkural);
+    thirukkural.forEach((post) => {
+      kural.insertAdjacentHTML(
+        "beforeend",
+        `
+        <div class="kural-sets">
+          <span class="kural-no">12</span>
+          <div class="kural-pack">
+            <div>
+              <p class="kural-line-1">அகர முதல எழுத்தெல்லாம் ஆதி</p>
+              <p class="kural-line-2">பகவன் முதற்றே உலகு.</p>
+            </div>
+            <p class="kural-eng">The Praise of God The Praise of God</p>
+          </div>
+        </div>
+        `
+      );
+    });
+  });
