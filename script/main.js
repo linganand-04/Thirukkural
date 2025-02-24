@@ -108,7 +108,7 @@ fetch("./couplets.json")
         <div class="couplets-set-format">
         <span class="couplets-no">${post.id}.</span>
           <div class="couplets-name">
-            <p class="couplets">${post.title_tam} / ${post.title_eng}</p>
+            <p class="couplets"><span class="tamil-small">${post.title_tam}</span> / ${post.title_eng}</p>
           </div>
         </div>
         `
@@ -137,21 +137,20 @@ const kural = document.querySelector(".kural-def");
 fetch("./kural.json")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data[0].thirukkural);
     const thirukkural = data[0].thirukkural;
-    console.log(thirukkural);
+
     thirukkural.forEach((post) => {
       kural.insertAdjacentHTML(
         "beforeend",
         `
         <div class="kural-sets">
-          <span class="kural-no">12</span>
+          <span class="kural-no">${post.kural}</span>
           <div class="kural-pack">
             <div>
-              <p class="kural-line-1">அகர முதல எழுத்தெல்லாம் ஆதி</p>
-              <p class="kural-line-2">பகவன் முதற்றே உலகு.</p>
+              <p class="kural-line-1 tamil-small">${post.tamil_1}</p>
+              <p class="kural-line-2 tamil-small">${post.tamil_2}.</p>
             </div>
-            <p class="kural-eng">The Praise of God The Praise of God</p>
+            <p class="kural-eng">${post.english}</p>
           </div>
         </div>
         `
