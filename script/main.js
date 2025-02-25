@@ -88,12 +88,12 @@ closebtn.addEventListener("click", closenav);
 
 window.addEventListener("scroll", () => {
   document
-    .querySelector(".heading")
+    .querySelector(".couplets-set-format-heading")
     .classList.toggle("sticky-heading", window.scrollY > 0);
 });
 
 /////////// ***** END ***** ////////////
-
+let limit = 0;
 const couplets = document.querySelector(".couplets-sets");
 
 fetch("./couplets.json")
@@ -101,18 +101,39 @@ fetch("./couplets.json")
   .then((data) => {
     const athikaram = data[0].couplets;
 
-    athikaram.forEach((post) => {
+    athikaram.forEach((post, i) => {
       couplets.insertAdjacentHTML(
         "beforeend",
         `
+
         <div class="couplets-set-format">
+      
         <span class="couplets-no">${post.id}.</span>
           <div class="couplets-name">
             <p class="couplets"><span class="tamil-small">${post.title_tam}</span> / ${post.title_eng}</p>
           </div>
+       
         </div>
         `
       );
+      const coupletsShow = document.querySelectorAll(".couplets-set-format");
+      coupletsShow[i].addEventListener("click", () => {
+        if (post.id === 1) {
+          limit = 0;
+          kuralfun();
+        }
+
+        if (post.id === 2) {
+          limit = 10;
+          console.log(limit);
+          kuralfun();
+        }
+        if (post.id === 3) {
+          limit = 20;
+          console.log(limit);
+          kuralfun();
+        }
+      });
     });
   });
 
@@ -120,40 +141,53 @@ fetch("./couplets.json")
 
 // <-- SHOW KURAL --> //
 
-const coupletsShow = document.querySelectorAll(".couplets-set-format");
+let kural = document.querySelector(".kural-def");
 
-coupletsShow.forEach(() => {
-  addEventListener("click", () => {
-    showKural();
-  });
-});
+function kuralfun() {
+  fetch("./kural.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const thirukkural = data[0].thirukkural;
+      kural.remove();
+      if (limit > 0) {
+        let newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "kural-def");
 
-function showKural() {
-  console.log("Hii");
-}
+        document.querySelector(".kural-container-inner").prepend(newDiv);
+        kural = newDiv;
+      } else {
+        let newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "kural-def");
 
-const kural = document.querySelector(".kural-def");
+        document.querySelector(".kural-container-inner").prepend(newDiv);
+        kural = newDiv;
+      }
 
-fetch("./kural.json")
-  .then((res) => res.json())
-  .then((data) => {
-    const thirukkural = data[0].thirukkural;
-
-    thirukkural.forEach((post) => {
-      kural.insertAdjacentHTML(
-        "beforeend",
-        `
+      for (let i = 0; i < 10; i++) {
+        kural.insertAdjacentHTML(
+          "beforeend",
+          `
         <div class="kural-sets">
-          <span class="kural-no">${post.kural}</span>
+          <span class="kural-no">${thirukkural[i + limit].kural}</span>
           <div class="kural-pack">
             <div>
-              <p class="kural-line-1 tamil-small">${post.tamil_1}</p>
-              <p class="kural-line-2 tamil-small">${post.tamil_2}.</p>
+              <p class="kural-line-1 tamil-small">${
+                thirukkural[i + limit].tamil_1
+              }</p>
+              <p class="kural-line-2 tamil-small">${
+                thirukkural[i + limit].tamil_2
+              }.</p>
             </div>
-            <p class="kural-eng">${post.english}</p>
+            <p class="kural-eng">${thirukkural[i + limit].english}</p>
           </div>
         </div>
         `
-      );
-    });
-  });
+        );
+
+        // kural-meaning.insertAdjentHTML
+      }
+    })
+    .catch((err) => console.log(err));
+}
+
+kuralfun();

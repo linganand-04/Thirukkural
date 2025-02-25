@@ -263,6 +263,18 @@ nav button {
   border: 1px solid black;
   border-radius: 9px;
 }
+.couplets-set-format-heading {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 9px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: #000;
+}
 
 /* .couplets-click{
   display: inline-block;
@@ -330,6 +342,7 @@ nav button {
   align-items: start;
   margin: 0 auto;
   gap: 10px;
+  padding: 12px;
 }
 
 .kural-sets {
@@ -340,7 +353,7 @@ nav button {
   gap: 10px;
   border-radius: 20px;
   padding: 10px;
-  box-shadow: inset 0 0 12px black;
+  box-shadow: 0 0 5px black;
 
   /* When active the div */
   /* background-color: black;
