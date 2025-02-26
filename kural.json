@@ -3,150 +3,152 @@
     "thirukkural": [
       {
         "id": 1,
+        "kural": 1,
         "tamil_1": "அகர முதல எழுத்தெல்லாம் ஆதி",
         "tamil_2": "பகவன் முதற்றே உலகு",
+        "tam_meaning": "எழுத்துக்கள் எல்லாம் அகரத்தை அடிப்படையாக கொண்டிருக்கின்றன.அதுபோல உலகம் கடவுளை அடிப்படையாக கொண்டிருக்கிறது",
         "english": "Praise the Lord",
-        "kural": 1
+        "eng_meaning": ""
       },
       {
         "id": 2,
-        "tamil_1": "",
+        "kural": 1,
+        "tamil_1": "பகவன் முதற்றே உலகு",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 3,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 4,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 5,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 6,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 7,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 8,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 9,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 10,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 11,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 12,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 13,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 14,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 15,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 16,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 17,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 18,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 19,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 20,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       },
       {
         "id": 21,
+        "kural": 1,
         "tamil_1": "",
         "tamil_2": "",
-        "english": "",
-        "kural": 1
+        "english": ""
       }
     ]
   }
