@@ -248,6 +248,7 @@ nav button {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  padding: 4px;
   row-gap: 10px;
   height: 370px;
   overflow-y: scroll;
@@ -291,6 +292,13 @@ nav button {
   left: 0;
   color: white;
   background-color: #000;
+}
+
+.active{
+  background-color: aqua;
+  color: #000;
+  border: none;
+  box-shadow: 0 0 5px rgb(38, 230, 255);
 }
 
 /**********************************/
