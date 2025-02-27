@@ -197,57 +197,7 @@
 
   /* FOOTER */
 
-  .container-footer {
-    max-width: 800px;
-  }
-
-  .grid-footer {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .menu-cols,
-  .rules-cols {
-    grid-row: 1;
-    grid-column: span 2;
-  }
-
-  .home-cols,
-  .contact-cols {
-    grid-row: 2;
-    grid-column: span 2;
-  }
-
-  .footer-heading {
-    margin-bottom: 32px;
-  }
-
-  .course {
-    padding: 7px;
-  }
-
-  .menu-cols {
-    padding: 0;
-  }
-
-  .menu-cols div {
-    gap: 15px;
-  }
-
-  .ryde-heading {
-    font-size: 20px;
-  }
-
-  .address p {
-    font-size: 13px;
-  }
-
-  .contact p {
-    font-size: 13px;
-  }
-
-  .copyright {
-    font-size: 13px;
-  }
+  
 }
 
 /**********************************/
@@ -277,43 +227,7 @@
     grid-template-columns: 350px;
   }
 
-  /* FOOTER */
-
-  .footer {
-    padding: 60px 0 30px 0;
-  }
-
-  .container-footer {
-    max-width: 600px;
-  }
-
-  .nav-menu,
-  .rules-menu {
-    font-size: 14px;
-  }
-
-  .address p {
-    font-size: 12px;
-  }
-
-  .copyright {
-    font-size: 12px;
-  }
-
-  .credits {
-    font-size: 14px;
-  }
-
-  .credits-name{
-    font-size: 12px;
-  }
-
-  .footer-img{
-    width: 32px;
-    height: 32px;
-  }
 }
-
 /**********************************/
 /* BELOW 545px ( PHONES ) */
 /**********************************/
@@ -366,47 +280,7 @@
 
   /* FOOTER */
 
-  .container-footer {
-    max-width: 500px;
-  }
 
-  .grid-footer {
-    column-gap: 5px;
-  }
-
-  .footer-heading {
-    font-size: 12px;
-  }
-
-  .ryde-heading {
-    font-size: 15px;
-    margin-bottom: 36px;
-  }
-
-  .social-links li svg {
-    height: 20px;
-  }
-
-  .address p {
-    font-size: 10px;
-  }
-
-  .contact p {
-    font-size: 10px;
-    letter-spacing: 1.1px;
-  }
-  .contact svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .copyright {
-    font-size: 9px;
-  }
-
-  .credits {
-    font-size: 10px;
-  }
 }
 
 /**********************************/
@@ -499,33 +373,7 @@
 
   /* FOOTER */
 
-  .container-footer {
-    max-width: 375px;
-  }
 
-  .grid-footer {
-    column-gap: 4px;
-  }
-
-  .footer-heading {
-    font-size: 9px;
-    margin-bottom: 24px;
-  }
-
-  .ryde-heading {
-    font-size: 10px;
-    margin-bottom: 32px;
-  }
-
-  .social-links {
-    gap: 14px;
-  }
-
-  .address p,
-  .contact p {
-    font-size: 9px;
-    letter-spacing: normal;
-  }
 }
 
 /**********************************/
@@ -535,34 +383,5 @@
 @media (max-width: 320px) {
   /* FOOTER */
 
-  .grid-footer {
-    column-gap: 5px;
-  }
-
-  .footer-heading {
-    font-size: 10px;
-  }
-
-  .ryde-heading {
-    font-size: 10px;
-    letter-spacing: normal;
-  }
-
-  .address p,
-  .contact p {
-    font-size: 8px;
-    letter-spacing: normal;
-  }
-
-  .social-links li svg {
-    height: 14px;
-  }
-
-  .social-links {
-    gap: 12px;
-  }
-
-  .copyright {
-    font-size: 8px;
-  }
+  
 }
