@@ -1,85 +1,56 @@
 let limit = 0;
-const couplets = document.querySelector(".couplets-sets");
+let posts = [];
 
 fetch("./couplets.json")
   .then((res) => res.json())
   .then((data) => {
     const athikaram = data[0].couplets;
-
-    athikaram.forEach((post, i) => {
-      if (post.id === 1) {
-        couplets.insertAdjacentHTML(
-          "beforeend",
-          `
+    const couplets = document.querySelector(".couplets-sets");
+    // Insert all couplets
+    athikaram.forEach((post) => {
+      couplets.insertAdjacentHTML(
+        "beforeend",
+        `
         <div class="couplets-set-format">
-      
-        <span class="couplets-no">${post.id}.</span>
+          <span class="couplets-no">${post.id}.</span>
           <div class="couplets-name">
             <p class="couplets"><span class="tamil-small">${post.title_tam}</span> / ${post.title_eng}</p>
           </div>
-       
         </div>
         `
-        );
-      } else {
-        couplets.insertAdjacentHTML(
-          "beforeend",
-          `
-        <div class="couplets-set-format">
-      
-        <span class="couplets-no">${post.id}.</span>
-          <div class="couplets-name">
-            <p class="couplets"><span class="tamil-small">${post.title_tam}</span> / ${post.title_eng}</p>
-          </div>
-       
-        </div>
-        `
-        );
-      }
-
-      const coupletsShow = document.querySelectorAll(".couplets-set-format");
-      
-      const active = window.location
-      console.log(active);
-
-      coupletsShow[i].addEventListener("click", () => {
-
-        console.log(
-          active
-        );
-        coupletsShow.forEach((act)=>{
-           console.log(act.classList.add("active"));
-        })
-        // if (coupletsShow.) {
-        //   coupletsShow[i].classList.remove("active");
-        // }
-        // else{
-        //   coupletsShow[i].classList.add("active");
-        // }
-        // FOR => GET THE DATA FROM JSON(kural.json) FORMAT
-        // for (let j = 0; j <= i; j++) {
-        //   let limit = j * 10;
-        //   kuralfun();
-        //   console.log(limit);
-        // }
-        // console.log(post.id, i);
-        // if (1 === 1) {
-        //   limit = 0;
-        //   kuralfun();
-        // }
-        // if (2 === 2) {
-        //   limit = 10;
-        //   kuralfun();
-        // }
-        // if (3 === 3) {
-        //   limit = 20;
-        //   kuralfun();
-        // }
-      });
-
-
+      );
+      posts.push(post.id);
     });
-  });
+
+    // Select elements AFTER insertion
+    const coupletsShow = document.querySelectorAll(".couplets-set-format");
+
+    // Attach event listeners
+    coupletsShow.forEach((element, i) => {
+      element.addEventListener("click", () => {
+        coupletsShow.forEach((value) => value.classList.remove("active"));
+        element.classList.add("active");
+
+        if (posts[i] === 1) {
+          limit = 0;
+          kuralfun();
+        }
+        if (posts[i] === 2) {
+          limit = 10;
+          kuralfun();
+        }
+        if (posts[i] === 3) {
+          limit = 20;
+          kuralfun();
+        }
+        if (posts[i] === 4) {
+          limit = 30;
+          kuralfun();
+        }
+      });
+    });
+  })
+  .catch((error) => console.error("Error fetching data:", error));
 
 // <-- END --> //
 
