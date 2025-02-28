@@ -23,7 +23,7 @@
 ::-webkit-scrollbar-track {
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
@@ -32,7 +32,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.568); 
+  background: rgba(0, 0, 0, 0.568);
 }
 
 * {
@@ -47,13 +47,12 @@ body {
   font-family: "Rubik", sans-serif;
   color: #000;
   overflow-x: hidden;
-  background: linear-gradient(60deg, whitesmoke, #d2f8f6);
+  background: linear-gradient(60deg, #d3f9d8, #ebfbee);
 }
 
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-
 }
 
 a {
@@ -286,11 +285,10 @@ nav button {
   border: 1px solid black;
   border-radius: 9px;
   transition: all 250ms ease-in-out;
-
 }
 
-.couplets-set-format:hover{
-  background-color:#55efc4;
+.couplets-set-format:hover {
+  background-color: #55efc4;
 }
 
 .couplets-set-format-heading {
@@ -384,17 +382,17 @@ nav button {
   background-color: #55efc4;
   color: #000;
   text-shadow: 0 0 1px black;
-transition: all 70ms ease-in-out;
+  transition: all 70ms ease-in-out;
 }
 
-.kural-sets:hover{
+.kural-sets:hover {
   background-color: black;
-  color: #55efc4;
+  color: white;
 }
 
 .activeKural {
   background-color: black;
-  color: #55efc4;
+  color: white;
 }
 
 .kural-pack div {
@@ -462,6 +460,10 @@ transition: all 70ms ease-in-out;
   padding: 14px 40px 0;
 }
 
+.footer {
+  padding: 15px;
+}
+
 .footer h3 {
   text-align: center;
   text-transform: uppercase;
@@ -488,13 +490,13 @@ transition: all 70ms ease-in-out;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-right:  15px;
+  padding-right: 15px;
   margin-right: 15px;
   border-right: 2px solid black;
 }
 
-.last{
-  padding-right:  0;
+.last {
+  padding-right: 0;
   margin-right: 0;
   border-right: none;
 }
