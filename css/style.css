@@ -47,7 +47,7 @@ body {
   font-family: "Rubik", sans-serif;
   color: #000;
   overflow-x: hidden;
-  background: linear-gradient(60deg, #d3f9d8, #ebfbee);
+  background: linear-gradient(60deg, #fbfefc, #ebfbee);
 }
 
 html {
@@ -238,7 +238,9 @@ nav button {
 }
 
 .couplets-navbar {
-  margin-bottom: 32px;
+  /* Temp */
+  /* margin-bottom: 32px; */ 
+  /* Temp */
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
@@ -266,6 +268,15 @@ nav button {
   outline-color: #424890;
 }
 
+.couplets-result-box{
+  width: 250px;
+  border-top: 1px solid black;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
 .couplets-sets {
   display: flex;
   flex-direction: column;
@@ -288,7 +299,7 @@ nav button {
 }
 
 .couplets-set-format:hover {
-  background-color: #55efc4;
+  background-color: #aaf7e2;
 }
 
 .couplets-set-format-heading {
@@ -379,7 +390,7 @@ nav button {
   padding: 10px;
   box-shadow: 0 0 3px black;
   backdrop-filter: blur(10px);
-  background-color: #55efc4;
+  background-color: #88f4d6;
   color: #000;
   text-shadow: 0 0 1px black;
   transition: all 70ms ease-in-out;

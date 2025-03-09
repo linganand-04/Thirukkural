@@ -95,3 +95,9 @@ window.addEventListener("scroll", () => {
 /////////// ***** END ***** ////////////
 
 
+//  <!-- SEARCH BAR FOR COUPLETS --> //
+
+
+
+
+
