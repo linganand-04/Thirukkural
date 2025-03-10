@@ -1,51 +1,668 @@
 [
   {
     "couplets": [
+      
       {
         "id": 1,
-        "title_tam": "கடவுள் வாழ்த்து",
-        "title_eng": "The Praise of God"
+        "title_tam": "வான்சிறப்பு",
+        "title_eng": "The Blessing of Rain"
       },
       {
         "id": 2,
-        "title_tam": "கடவுள் வாழ்த்து",
-        "title_eng": "The Praise of God The Praise of God The Praise of God"
+        "title_tam":"நீத்தார் பெருமை",
+        "title_eng": "The Greatness of Ascetics"
       },
       {
         "id": 3,
-        "title_tam": "Name 1",
-        "title_eng": "Name 2"
+        "title_tam": "அறன் வலியுறுத்தல்",
+        "title_eng": "Assertion of the Strength of Virtue"
       },
       {
         "id": 4,
-        "title_tam": "Name 1",
-        "title_eng": "Name 2"
+        "title_tam": "இல்வாழ்க்கை",
+        "title_eng": "Domestic Life"
       },
       {
         "id": 5,
-        "title_tam": "Name 1",
-        "title_eng": "Name 2"
+        "title_tam": "வாழ்க்கைத் துணைநலம்",
+        "title_eng": "The Worth of a Wife"
       },
       {
         "id": 6,
-        "title_tam": "Name 1",
-        "title_eng": "Name 2"
+        "title_tam": "புதல்வரைப் பெறுதல்",
+        "title_eng": "The Wealth of Children"
       },
       {
         "id": 7,
-        "title_tam": "Name 1",
-        "title_eng": "Name 2"
+        "title_tam": "அன்புடைமை",
+        "title_eng": "The Possession of Love"
       },
       {
         "id": 8,
-        "title_tam": "",
-        "title_eng": ""
+        "title_tam": "விருந்தோம்பல்",
+        "title_eng": "Hospitality"
       },
       {
         "id": 9,
-        "title_tam": "",
-        "title_eng": ""
+        "title_tam": "இனியவை கூறல்",
+        "title_eng": "The Utterance of Pleasant Words"
+      },
+      {
+        "id": 10,
+        "title_tam": "செய்ந்நன்றி அறிதல்",
+        "title_eng": "Gratitude"
+      },
+      {
+        "id": 11,
+        "title_tam": "நடுவு நிலைமை",
+        "title_eng": "Impartiality"
+      },
+      {
+        "id": 12,
+        "title_tam": "அடக்கமுடைமை",
+        "title_eng": "The Possession of Self-restraint"
+      },
+      {
+        "id": 13,
+        "title_tam": "ஒழுக்கமுடைமை",
+        "title_eng": "The Possession of Decorum"
+      },
+      {
+        "id": 14,
+        "title_tam": "பிறனில் விழையாமை",
+        "title_eng": "Not coveting another's Wife"
+      },
+      {
+        "id": 15,
+        "title_tam": "பொறையுடைமை",
+        "title_eng": "The Possession of Patience, Forbearance"
+      },
+      {
+        "id": 16,
+        "title_tam": "அழுக்காறாமை",
+        "title_eng": "Not Envying"
+      },
+      {
+        "id": 17,
+        "title_tam": "வெஃகாமை",
+        "title_eng": "Not Coveting"
+      },
+      {
+        "id": 18,
+        "title_tam": "புறங்கூறாமை",
+        "title_eng": "Not Backbiting"
+      },
+      {
+        "id":19,
+        "title_tam": "பயனில சொல்லாமை",
+        "title_eng": "Against Vain Speaking"
+      },
+      {
+        "id":20,
+        "title_tam": "தீவினையச்சம்",
+        "title_eng": "Dread of Evil Deeds"
+      },
+      {
+        "id":21,
+        "title_tam": "ஒப்புரவறிதல்",
+        "title_eng": "Duty to Society"
+      },
+      {
+        "id":22,
+        "title_tam": "ஈகை",
+        "title_eng": "Giving"
+      },
+      {
+        "id":23,
+        "title_tam": "புகழ்",
+        "title_eng": "Renown"
+      },
+      {
+        "id":24,
+        "title_tam": "அருளுடைமை",
+        "title_eng": "Compassion"
+      },
+      {
+        "id":25,
+        "title_tam": "புலான்மறுத்தல்",
+        "title_eng": "Abstinence from Flesh"
+      },
+      {
+        "id":26,
+        "title_tam": "தவம்",
+        "title_eng": "Penance"
+      },
+      {
+        "id":27,
+        "title_tam": "கூடாவொழுக்கம்",
+        "title_eng": "Imposture"
+      },
+      {
+        "id":28,
+        "title_tam": "கள்ளாமை",
+        "title_eng": "The Absence of Fraud"
+      },
+      {
+        "id":29,
+        "title_tam": "வாய்மை",
+        "title_eng": "Veracity"
+      },
+      {
+        "id":30,
+        "title_tam": "வெகுளாமை",
+        "title_eng": "Restraining Anger"
+      },
+      {
+        "id":31,
+        "title_tam": "இன்னாசெய்யாமை",
+        "title_eng": "Not doing Evil"
+      },
+      {
+        "id":32,
+        "title_tam": "கொல்லாமை",
+        "title_eng": "Not killing"
+      },
+      {
+        "id":33,
+        "title_tam": "நிலையாமை",
+        "title_eng": "Instability"
+      },
+      {
+        "id":34,
+        "title_tam": "துறவு",
+        "title_eng": "Renunciation"
+      },
+      {
+        "id":35,
+        "title_tam": "மெய்யுணர்தல்",
+        "title_eng": "Truth-Conciousness"
+      },
+      {
+        "id":36,
+        "title_tam": "அவாவறுத்தல்",
+        "title_eng": "Curbing of Desire"
+      },
+      {
+        "id":37,
+        "title_tam": "ஊழ்",
+        "title_eng": "Fate"
+      },
+      {
+        "id":38,
+        "title_tam": "இறைமாட்சி",
+        "title_eng": "The Greatness of a King"
+      },
+      {
+        "id":39,
+        "title_tam": "கல்வி",
+        "title_eng": "Learning"
+      },
+      {
+        "id":40,
+        "title_tam": "கல்லாமை",
+        "title_eng": "Ignorance"
+      },
+      {
+        "id":41,
+        "title_tam": "கேள்வி",
+        "title_eng": "Hearing"
+      },
+      {
+        "id":42,
+        "title_tam": "அறிவுடைமை",
+        "title_eng": "The Possession of Knowledge"
+      },
+      {
+        "id":43,
+        "title_tam": "குற்றங்கடிதல்",
+        "title_eng": "The Correction of Faults"
+      },
+      {
+        "id":44,
+        "title_tam": "பெரியாரைத் துணைக்கோடல்",
+        "title_eng": "Seeking the Aid of Great Men"
+      },
+      {
+        "id":45,
+        "title_tam": "சிற்றினஞ்சேராமை",
+        "title_eng": "Avoiding mean Associations"
+      },
+      {
+        "id":46,
+        "title_tam": "தெரிந்துசெயல்வகை",
+        "title_eng": "Acting after due Consideration"
+      },
+      {
+        "id":47,
+        "title_tam": "வலியறிதல்",
+        "title_eng": "The Knowledge of Power"
+      },
+      {
+        "id":48,
+        "title_tam": "காலமறிதல்",
+        "title_eng": "Knowing the fitting Time"
+      },
+      {
+        "id":49,
+        "title_tam": "இடனறிதல்",
+        "title_eng": "Knowing the Place"
+      },
+      {
+        "id":50,
+        "title_tam": "தெரிந்துதெளிதல்",
+        "title_eng": "Selection and Confidence"
+      },
+      {
+        "id":51,
+        "title_tam": "தெரிந்துவினையாடல்",
+        "title_eng": "Selection and Employment"
+      },
+      {
+        "id":52,
+        "title_tam": "சுற்றந்தழால்",
+        "title_eng": "Cherishing Kinsmen"
+      },
+      {
+        "id":53,
+        "title_tam": "பொச்சாவாமை",
+        "title_eng": "Unforgetfulness"
+      },
+      {
+        "id":54,
+        "title_tam": "செங்கோன்மை",
+        "title_eng": "The Right Sceptre"
+      },
+      {
+        "id":55,
+        "title_tam": "கொடுங்கோன்மை",
+        "title_eng": "The Cruel Sceptre"
+      },
+      {
+        "id":56,
+        "title_tam": "வெருவந்தசெய்யாமை",
+        "title_eng": "Absence of Terrorism"
+      },
+      {
+        "id":57,
+        "title_tam": "கண்ணோட்டம்",
+        "title_eng": "Benignity"
+      },
+      {
+        "id":58,
+        "title_tam": "ஒற்றாடல்",
+        "title_eng": "Detectives"
+      },
+      {
+        "id":59,
+        "title_tam": "ஊக்கமுடைமை",
+        "title_eng": "Energy"
+      },
+      {
+        "id":60,
+        "title_tam": "மடியின்மை",
+        "title_eng": "Unsluggishness"
+      },
+      {
+        "id":61,
+        "title_tam": "ஆள்வினையுடைமை",
+        "title_eng": "Manly Effort"
+      },
+      {
+        "id":62,
+        "title_tam":"இடுக்கணழியாமை",
+        "title_eng": "Hopefulness in Trouble"
+      },
+      {
+        "id":63,
+        "title_tam": "அமைச்சு",
+        "title_eng": "The Office of Minister of state"
+      },
+      {
+        "id":64,
+        "title_tam": "சொல்வன்மை",
+        "title_eng": "Power of Speech"
+      },
+      {
+        "id":65,
+        "title_tam": "வினைத்தூய்மை",
+        "title_eng": "Purity in Action"
+      },
+      {
+        "id":66,
+        "title_tam": "வினைத்திட்பம்",
+        "title_eng": "Power in Action"
+      },
+      {
+        "id":67,
+        "title_tam": "வினைசெயல்வகை",
+        "title_eng": "Modes of Action"
+      },
+      {
+        "id":68,
+        "title_tam": "தூது",
+        "title_eng": "The Envoy"
+      },
+      {
+        "id":69,
+        "title_tam": "மன்னரைச் சேர்ந்தொழுதல்",
+        "title_eng": "Conduct in the Presence of the King"
+      },
+      {
+        "id":70,
+        "title_tam": "குறிப்பறிதல்",
+        "title_eng": "The Knowledge of Indications"
+      },
+      {
+        "id":71,
+        "title_tam": "அவையறிதல்",
+        "title_eng": "The Knowledge of the Council Chamber"
+      },
+      {
+        "id":72,
+        "title_tam": "அவையஞ்சாமை",
+        "title_eng": "Not to dread the Council"
+      },
+      {
+        "id":73,
+        "title_tam": "நாடு",
+        "title_eng": "The Land"
+      },
+      {
+        "id":74,
+        "title_tam": "அரண்",
+        "title_eng": "The Fortification"
+      },
+      {
+        "id":75,
+        "title_tam": "பொருள்செயல்வகை",
+        "title_eng": "Way of Accumulating Wealth"
+      },
+      {
+        "id":76,
+        "title_tam": "படைமாட்சி",
+        "title_eng": "The Excellence of an Army"
+      },
+      {
+        "id":77,
+        "title_tam": "படைச்செருக்கு",
+        "title_eng": "Military Spirit"
+      },
+      {
+        "id":78,
+        "title_tam": "நட்பு",
+        "title_eng": "Friendship"
+      },
+      {
+        "id":79,
+        "title_tam": "நட்பாராய்தல்",
+        "title_eng": "Investigation in forming Friendships"
+      },
+      {
+        "id":80,
+        "title_tam":"பழைமை",
+        "title_eng":"Familiarity"
+      },
+      {
+        "id":81,
+        "title_tam": "தீ நட்பு",
+        "title_eng": "Evil Friendship"
+      },
+      {
+        "id":82,
+        "title_tam": "கூடாநட்பு",
+        "title_eng": "Unreal Friendship"
+      },
+      {
+        "id":83,
+        "title_tam": "பேதைமை",
+        "title_eng": "Folly"
+      },
+      {
+        "id":84,
+        "title_tam": "புல்லறிவாண்மை",
+        "title_eng": "Ignorance"
+      },
+      {
+        "id":85,
+        "title_tam": "இகல்",
+        "title_eng": "Hostility"
+      },
+      {
+        "id":86,
+        "title_tam": "பகைமாட்சி",
+        "title_eng": "The Might of Hatred"
+      },
+      {
+        "id":87,
+        "title_tam": "பகைத்திறந்தெரிதல்",
+        "title_eng": "Knowing the Quality of Hate"
+      },
+      {
+        "id":88,
+        "title_tam": "உட்பகை",
+        "title_eng": "Enmity within"
+      },
+      {
+        "id":89,
+        "title_tam": "பெரியாரைப் பிழையாமை",
+        "title_eng": "Not Offending the Great"
+      },
+      {
+        "id":90,
+        "title_tam": "பெண்வழிச்சேறல்",
+        "title_eng": "Being led by Women"
+      },
+      {
+        "id":91,
+        "title_tam": "வரைவின்மகளிர்",
+        "title_eng": "Wanton Women"
+      },
+      {
+        "id":92,
+        "title_tam": "கள்ளுண்ணாமை",
+        "title_eng": "Not Drinking Palm-Wine"
+      },
+      {
+        "id":93,
+        "title_tam": "சூது",
+        "title_eng": "Gambling"
+      },
+      {
+        "id":94,
+        "title_tam": "மருந்து",
+        "title_eng": "Medicine"
+      },
+      {
+        "id":95,
+        "title_tam": "குடிமை",
+        "title_eng": "Nobility"
+      },
+      {
+        "id":96,
+        "title_tam": "மானம்",
+        "title_eng": "Honour"
+      },
+      {
+        "id":97,
+        "title_tam":"பெருமை",
+        "title_eng": "Greatness"
+      },
+      {
+        "id":98,
+        "title_tam": "சான்றாண்மை",
+        "title_eng": "Perfectness"
+      },
+      {
+        "id":99,
+        "title_tam": "பண்புடைமை",
+        "title_eng": "Courtesy"
+      },
+      {
+        "id":100,
+        "title_tam": "நன்றியில்செல்வம்",
+        "title_eng": "Wealth without Benefaction"
+      },
+      {
+        "id":101,
+        "title_tam": "நாணுடைமை",
+        "title_eng": "Shame"
+      },
+      {
+        "id":102,
+        "title_tam": "குடிசெயல்வகை",
+        "title_eng": "The Way of Maintaining the Family"
+      },
+      {
+        "id":103,
+        "title_tam": "உழவு",
+        "title_eng": "Farming"
+      },
+      {
+        "id":104,
+        "title_tam": "நல்குரவு",
+        "title_eng": "Poverty"
+      },
+      {
+        "id":105,
+        "title_tam": "இரவு",
+        "title_eng": "Mendicancy"
+      },
+      {
+        "id":106,
+        "title_tam": "இரவச்சம்",
+        "title_eng": "The Dread of Mendicancy"
+      },
+      {
+        "id":107,
+        "title_tam": "கயமை",
+        "title_eng": "Baseness"
+      },
+      {
+        "id":108,
+        "title_tam": "தகையணங்குறுத்தல்",
+        "title_eng": "The Pre-marital love"
+      },
+      {
+        "id":109,
+        "title_tam": "குறிப்பறிதல்",
+        "title_eng": "Recognition of the Signs"
+      },
+      {
+        "id":110,
+        "title_tam": "புணர்ச்சிமகிழ்தல்",
+        "title_eng": "Rejoicing in the Embrace"
+      },
+      {
+        "id":111,
+        "title_tam": "நலம்புனைந்துரைத்தல்",
+        "title_eng": "The Praise of her Beauty"
+      },
+      {
+        "id":112,
+        "title_tam": "காதற்சிறப்புரைத்தல்",
+        "title_eng": "Declaration of Love's special Excellence"
+      },
+      {
+        "id":113,
+        "title_tam": "நாணுத்துறவுரைத்தல்",
+        "title_eng": "The Abandonment of Reserve"
+      },
+      {
+        "id":114,
+        "title_tam": "அலரறிவுறுத்தல்",
+        "title_eng": "The Announcement of the Rumour"
+      },
+      {
+        "id":115,
+        "title_tam": "பிரிவாற்றாமை",
+        "title_eng": "Separation unendurable"
+      },
+      {
+        "id":116,
+        "title_tam": "படர்மெலிந்திரங்கல்",
+        "title_eng": "Complainings"
+      },
+      {
+        "id":117,
+        "title_tam": "கண்விதுப்பழிதல்",
+        "title_eng": "Eyes consumed with Grief"
+      },
+      {
+        "id":118,
+        "title_tam": "பசப்புறுபருவரல்",
+        "title_eng": "The Pallid Hue"
+      },
+      {
+        "id":119,
+        "title_tam": "தனிப்படர்மிகுதி",
+        "title_eng": "The Solitary Anguish"
+      },
+      {
+        "id":120,
+        "title_tam": "நினைந்தவர்புலம்பல்",
+        "title_eng": "Sad Memories"
+      },
+      {
+        "id":121,
+        "title_tam": "கனவுநிலையுரைத்தல்",
+        "title_eng": "The Visions of the Night"
+      },
+      {
+        "id":122,
+        "title_tam": "பொழுதுகண்டிரங்கல்",
+        "title_eng": "Lamentations at Eventide"
+      },
+      {
+        "id":123,
+        "title_tam": "உறுப்புநலனழிதல்",
+        "title_eng": "Wasting Away"
+      },
+      {
+        "id":124,
+        "title_tam": "நெஞ்சொடுகிளத்தல்",
+        "title_eng": "Soliloquy"
+      },
+      {
+        "id":125,
+        "title_tam": "நிறையழிதல்",
+        "title_eng": "Reserve Overcome"
+      },
+      {
+        "id":126,
+        "title_tam": "அவர்வயின்விதும்பல்",
+        "title_eng": "Mutual Desire"
+      },
+      {
+        "id":127,
+        "title_tam": "குறிப்பறிவுறுத்தல்",
+        "title_eng": "The Reading of the Signs"
+      },
+      {
+        "id":128,
+        "title_tam": "புணர்ச்சிவிதும்பல்",
+        "title_eng": "Desire for Reunion"
+      },
+      {
+        "id":129,
+        "title_tam": "நெஞ்சொடுபுலத்தல்",
+        "title_eng": "Expostulation with Oneself"
+      },
+      {
+        "id":130,
+        "title_tam": "புலவி",
+        "title_eng": "Pouting"
+      },
+      {
+        "id":131,
+        "title_tam": "புலவி நுணுக்கம்",
+        "title_eng": "Feigned Anger"
+      },
+      {
+        "id":132,
+        "title_tam": "ஊடலுவகை",
+        "title_eng": "The Pleasures of Temporary Variance"
       }
+
     ]
   }
 ]
