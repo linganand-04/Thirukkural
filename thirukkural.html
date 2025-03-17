@@ -98,19 +98,25 @@
           <!-- Couplets Navbar -->
 
           <div class="couplets-navbar">
-              <box-icon id="couplets-search-icon" name="search-alt-2"></box-icon>
-              <input
+            <box-icon id="couplets-search-icon" name="search-alt-2"></box-icon>
+            <input
               type="search"
               placeholder="Search அதிகாரம் / Couplets"
               name="couplets-search-bar"
               id="couplets-search-bar"
-              />
+            />
+            <i class="bx bxs-right-arrow bx-flashing couplets-down-arrow"></i>
+          </div>
+          <div class="couplets-search-type">
+            <ul>
+              <li class="filter-no">Number</li>
+              <li class="filter-tam">Tamil</li>
+              <li class="filter-eng" >English</li>
+            </ul>
           </div>
           <div class="couplets-result-box">
             <ul>
-              <li>ji</li>
-              <li>ji</li>
-              <li>ji</li>
+              <!-- <li>Javacsript</li> -->
             </ul>
           </div>
 
@@ -128,7 +134,8 @@
               <span class="couplets-no">1</span>
               <div class="couplets-name">
                 <p class="couplets">
-                  <span class="tamil-small">கடவுள் வாழ்த்து</span> / The Praise of God
+                  <span class="tamil-small">கடவுள் வாழ்த்து</span> / The Praise
+                  of God
                 </p>
               </div>
             </div>
@@ -209,29 +216,53 @@
 
     <!-- FOOTER -->
 
-     <footer class="footer-section">
-<div class="footer">
-  <h3>Developed by</h3>
-  <div class="student">
-    <div class="student-profile"><a class="student-link" href="#">
-      <img class="student-img" src="img/logos/Linganand.jpg" alt="Linganand img missing"> 
-      <h4 class="student-name">Linganand</h4>
-    </a></div>
-    <div class="student-profile"><a class="student-link" href="#">
-      <img class="student-img" src="img/logos/Linganand.jpg" alt="Deepika img missing"> 
-      <h4 class="student-name">Deepika</h4>
-    </a></div>
-    <div class="student-profile"><a class="student-link" href="#">
-      <img class="student-img" src="img/logos/Linganand.jpg" alt="Kamalesh img missing"> 
-      <h4 class="student-name">Kamalesh</h4>
-    </a></div>
-    <div class="student-profile"><a class="student-link last" href="#">
-      <img class="student-img" src="img/logos/Linganand.jpg" alt="Gopika img missing"> 
-      <h4 class="student-name">Gopika</h4>
-    </a></div>
-  </div>
-</div>
-     </footer>
+    <footer class="footer-section">
+      <div class="footer">
+        <h3>Developed by</h3>
+        <div class="student">
+          <div class="student-profile">
+            <a class="student-link" href="#">
+              <img
+                class="student-img"
+                src="img/logos/Linganand.jpg"
+                alt="Linganand img missing"
+              />
+              <h4 class="student-name">Linganand</h4>
+            </a>
+          </div>
+          <div class="student-profile">
+            <a class="student-link" href="#">
+              <img
+                class="student-img"
+                src="img/logos/Linganand.jpg"
+                alt="Deepika img missing"
+              />
+              <h4 class="student-name">Deepika</h4>
+            </a>
+          </div>
+          <div class="student-profile">
+            <a class="student-link" href="#">
+              <img
+                class="student-img"
+                src="img/logos/Linganand.jpg"
+                alt="Kamalesh img missing"
+              />
+              <h4 class="student-name">Kamalesh</h4>
+            </a>
+          </div>
+          <div class="student-profile">
+            <a class="student-link last" href="#">
+              <img
+                class="student-img"
+                src="img/logos/Linganand.jpg"
+                alt="Gopika img missing"
+              />
+              <h4 class="student-name">Gopika</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- =================== javacsript portion=============================== -->
 

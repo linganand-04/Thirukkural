@@ -238,12 +238,11 @@ nav button {
 }
 
 .couplets-navbar {
-  /* Temp */
-  /* margin-bottom: 32px; */ 
-  /* Temp */
+  position: relative;
+  margin-bottom: 20px; 
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
+  justify-content: space-evenly;
   background: white;
   padding: 5px 12px;
   border-radius: 30px;
@@ -257,24 +256,88 @@ nav button {
 }
 
 #couplets-search-bar {
-  width: 250px;
+  width: 280px;
   padding: 5px 12px;
   border-radius: 20px;
   border: none;
   outline: none;
+}
+
+#couplets-search-bar:focus{
+  background: transparent;
 }
 
 #couplets-search-bar:active {
   outline-color: #424890;
 }
 
+::placeholder{
+  color: #333;
+}
+
+.couplets-down-arrow{
+  cursor:pointer;
+  position: relative;
+}
+
+.couplets-search-type{
+  display: none;
+}
+
+.couplets-search-type ul li{
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: white;
+}
+
+.couplets-search-type ul li:hover{
+  background-color: rgb(0, 195, 255);
+  color: #000;
+  cursor: pointer;
+}
+
+.couplets-search-type-show{
+  display: block;
+  position: absolute;
+  z-index: 20;
+  left: 29%;
+  top: 12%;
+}
+
 .couplets-result-box{
-  width: 250px;
+  display: none;
+  width: 350px;
   border-top: 1px solid black;
-  padding: 5px 12px;
-  border-radius: 20px;
-  border: none;
+  padding: 5px;
   outline: none;
+}
+
+.couplets-result-box-show{
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background-color: whitesmoke;
+  overflow: scroll;
+  height: 370px;
+}
+
+.couplets-result-box ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  gap: 5px;
+}
+
+.couplets-result-box ul li{
+  cursor: pointer;
+  list-style: none;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.couplets-result-box ul li:hover{
+  background-color: #e9feff;
 }
 
 .couplets-sets {
@@ -380,12 +443,16 @@ nav button {
   cursor: pointer;
 }
 
+/* .kural-def div{
+  margin: 0 auto;
+} */
+
 .kural-sets {
-  width: 320px;
+  width: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0 0 3px black;
@@ -407,11 +474,15 @@ nav button {
 }
 
 .kural-pack div {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.kural-no{
+  font-size: 13px;
 }
 
 .kural-eng {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /**********************************/
@@ -438,14 +509,15 @@ nav button {
 .kural-tamil,
 .kural-english {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .quote-tam,
 .quote-eng {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  width: 350px;
+  text-align: left;
+  width: 430px;
   margin: 0 auto 10px;
   padding: 7px;
   border-radius: 14px 10px 14px 10px;
@@ -457,9 +529,14 @@ nav button {
   text-shadow: 0 0 1px black;
 }
 
+.quote-tam div,
+.quote-eng div{
+  margin: 0 auto;
+}
+
 .meaning-eng,
 .quote-eng {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 /* *********************** */
@@ -549,13 +626,13 @@ nav button {
 
 .tamil-small {
   font-family: "Mukta Malar", serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.2;
 }
 
 .tamil-medium {
   font-family: "Mukta Malar", serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.2;
 }
 
