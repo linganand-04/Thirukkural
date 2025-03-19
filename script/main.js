@@ -7,6 +7,9 @@
 
 // BATCH ONCLICK //
 
+let coupletsFilter = "english"
+
+
 const batch = document.querySelector(".batch");
 const batchYear = document.querySelector(".batch-year");
 const body = document.querySelector("body");
@@ -95,3 +98,110 @@ window.addEventListener("scroll", () => {
 /////////// ***** END ***** ////////////
 
 
+//  <!-- SEARCH BAR FOR COUPLETS --> //
+
+// const coupletsSearch = document.querySelector("#couplets-search-bar");
+
+const resultBox = document.querySelector(".couplets-result-box");
+
+// console.log(coupletsSearch, resultBox);
+
+// coupletsSearch.onkeyup = function () {
+//   let result = [];
+//   let input = input.value.toLowerCase();
+// };
+
+const coupletSearch = document.querySelector('#couplets-search-bar');
+const coupletSearchBox = document.querySelector('.couplets-result-box')
+const coupletBoxDiv = document.querySelector('.couplets-result-box')
+const coupletBoxClick = document.querySelector('.couplets-result-box ul li')
+
+coupletSearch.onkeyup = function(){
+
+fetch('./couplets.json')
+.then((key)=>key.json())
+.then((data)=>{
+  let searchData = data[0].couplets;
+  console.log(searchData);
+
+
+let input = coupletSearch.value;
+let result = []
+
+if(input.length){
+  result = searchData.filter((keyword)=>{
+
+  if(coupletsFilter === "number"){
+
+  return String(keyword.id).includes(input)
+  }else if(coupletsFilter === "english"){
+  return keyword.title_eng.toLowerCase().includes(input.toLowerCase())
+  }
+  else if(coupletsFilter === "tamil"){
+    return keyword.title_tam.includes(input) 
+  }
+  })
+
+  console.log(result);
+
+  // console.log(`${result[0].title_eng} / ${result.title_tam}`);
+
+let content = result.map((details)=>{
+    return `
+    <li onclick="selectInput(this)+kuralfun()"> ${details.id}. ${details.title_eng} / ${details.title_tam} </li>`
+  })
+
+  coupletBoxDiv.innerHTML = `<ul> ${content.join('')} </ul>`
+
+}
+
+ 
+console.log(input);
+
+coupletSearchBox.classList.add("couplets-result-box-show")
+
+document.body.addEventListener('click', () => {
+  const coupletBoxClick = document.querySelector(".couplets-result-box-show");
+  const coupDownArr = document.querySelector(".couplets-down-arrow") 
+  if (coupletBoxClick) {
+    coupletBoxClick.classList.remove("couplets-result-box-show");
+  }
+  else if(coupDownArr){
+    searchDownArr.classList.remove("couplets-search-type-show")
+  }
+});
+
+})
+}
+
+function selectInput(details){
+  coupletSearch.value = details.innerHTML;
+  
+}
+
+const coupDownArr = document.querySelector(".couplets-down-arrow") 
+
+const searchDownArr = document.querySelector(".couplets-search-type") 
+
+const coupFilterNo = document.querySelector(".filter-no") 
+const coupFilterTam = document.querySelector(".filter-tam") 
+const coupFilterEng = document.querySelector(".filter-eng") 
+
+coupDownArr.addEventListener('click',()=>{
+     searchDownArr.classList.toggle("couplets-search-type-show")
+})
+
+coupFilterNo.addEventListener('click',()=>{
+  coupletsFilter = "number"
+  searchDownArr.classList.remove("couplets-search-type-show")
+})
+
+coupFilterTam.addEventListener('click',()=>{
+  coupletsFilter = "tamil"
+  searchDownArr.classList.remove("couplets-search-type-show")
+})
+
+coupFilterEng.addEventListener('click',()=>{
+  coupletsFilter = "english"
+  searchDownArr.classList.remove("couplets-search-type-show")
+})

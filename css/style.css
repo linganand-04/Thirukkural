@@ -14,6 +14,27 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #b9b9b9d2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.568);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +47,7 @@ body {
   font-family: "Rubik", sans-serif;
   color: #000;
   overflow-x: hidden;
-  background: linear-gradient(60deg, whitesmoke, #d2f8f6);
+  background: linear-gradient(60deg, #fbfefc, #ebfbee);
 }
 
 html {
@@ -213,13 +234,15 @@ nav button {
   display: grid;
   grid-template-columns: 1fr 3fr;
   padding: 24px;
+  padding-bottom: 0;
 }
 
 .couplets-navbar {
-  margin-bottom: 32px;
+  position: relative;
+  margin-bottom: 20px; 
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
+  justify-content: space-evenly;
   background: white;
   padding: 5px 12px;
   border-radius: 30px;
@@ -233,15 +256,88 @@ nav button {
 }
 
 #couplets-search-bar {
-  width: 250px;
+  width: 280px;
   padding: 5px 12px;
   border-radius: 20px;
   border: none;
   outline: none;
 }
 
+#couplets-search-bar:focus{
+  background: transparent;
+}
+
 #couplets-search-bar:active {
   outline-color: #424890;
+}
+
+::placeholder{
+  color: #333;
+}
+
+.couplets-down-arrow{
+  cursor:pointer;
+  position: relative;
+}
+
+.couplets-search-type{
+  display: none;
+}
+
+.couplets-search-type ul li{
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: white;
+}
+
+.couplets-search-type ul li:hover{
+  background-color: rgb(0, 195, 255);
+  color: #000;
+  cursor: pointer;
+}
+
+.couplets-search-type-show{
+  display: block;
+  position: absolute;
+  z-index: 20;
+  left: 29%;
+  top: 12%;
+}
+
+.couplets-result-box{
+  display: none;
+  width: 350px;
+  border-top: 1px solid black;
+  padding: 5px;
+  outline: none;
+}
+
+.couplets-result-box-show{
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background-color: whitesmoke;
+  overflow: scroll;
+  height: 370px;
+}
+
+.couplets-result-box ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  gap: 5px;
+}
+
+.couplets-result-box ul li{
+  cursor: pointer;
+  list-style: none;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.couplets-result-box ul li:hover{
+  background-color: #e9feff;
 }
 
 .couplets-sets {
@@ -252,7 +348,6 @@ nav button {
   row-gap: 10px;
   height: 370px;
   overflow-y: scroll;
-  scrollbar-width: none;
   position: relative;
 }
 
@@ -263,42 +358,37 @@ nav button {
   cursor: pointer;
   border: 1px solid black;
   border-radius: 9px;
+  transition: all 250ms ease-in-out;
 }
+
+.couplets-set-format:hover {
+  background-color: #aaf7e2;
+}
+
 .couplets-set-format-heading {
   display: flex;
   gap: 10px;
-  padding: 12px;
+  padding: 15px;
   border: 1px solid black;
   border-radius: 9px;
   position: sticky;
-  top: 0;
+  top: -1px;
   left: 0;
   color: white;
   background-color: #000;
+  box-shadow: 0 0 5px black, 0 0 5px black;
 }
-
-/* .couplets-click{
-  display: inline-block;
-} */
 
 .couplets {
   text-align: justify;
   font-size: 14px;
 }
 
-.heading {
-  position: sticky;
-  top: 0;
-  left: 0;
-  color: white;
-  background-color: #000;
-}
-
-.active{
-  background-color: aqua;
+.active {
+  background-color: #55efc4;
   color: #000;
   border: none;
-  box-shadow: 0 0 5px rgb(38, 230, 255);
+  /* box-shadow: 0 0 5px rgb(38, 230, 255); */
 }
 
 /**********************************/
@@ -344,37 +434,55 @@ nav button {
 .kural-def {
   height: 370px;
   overflow-y: scroll;
-  scrollbar-width: none;
   display: flex;
   flex-direction: column;
   align-items: start;
   margin: 0 auto;
-  gap: 10px;
+  gap: 12px;
   padding: 12px;
   cursor: pointer;
 }
 
+/* .kural-def div{
+  margin: 0 auto;
+} */
+
 .kural-sets {
-  width: 320px;
+  width: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   border-radius: 20px;
   padding: 10px;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 3px black;
+  backdrop-filter: blur(10px);
+  background-color: #88f4d6;
+  color: #000;
+  text-shadow: 0 0 1px black;
+  transition: all 70ms ease-in-out;
+}
 
-  /* When active the div */
-  /* background-color: black;
-  color: #20ded3; */
+.kural-sets:hover {
+  background-color: black;
+  color: white;
+}
+
+.activeKural {
+  background-color: black;
+  color: white;
 }
 
 .kural-pack div {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.kural-no{
+  font-size: 13px;
 }
 
 .kural-eng {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /**********************************/
@@ -401,14 +509,15 @@ nav button {
 .kural-tamil,
 .kural-english {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .quote-tam,
 .quote-eng {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  width: 350px;
+  text-align: left;
+  width: 430px;
   margin: 0 auto 10px;
   padding: 7px;
   border-radius: 14px 10px 14px 10px;
@@ -420,10 +529,77 @@ nav button {
   text-shadow: 0 0 1px black;
 }
 
+.quote-tam div,
+.quote-eng div{
+  margin: 0 auto;
+}
+
 .meaning-eng,
 .quote-eng {
-  font-size: 15px;
+  font-size: 13px;
 }
+
+/* *********************** */
+/* ******** FOOTER ******* */
+/* *********************** */
+
+.footer-section {
+  background-color: #88bd8c;
+  padding: 14px 40px 0;
+}
+
+.footer {
+  padding: 15px;
+}
+
+.footer h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.student {
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  /* gap: 30px; */
+  padding-bottom: 5px;
+}
+
+.student-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 2px solid black;
+}
+
+.last {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: none;
+}
+
+.student-img {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+}
+
+.student-name {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
 /* *********************** */
 /* ******** COMMON ******* */
 /* *********************** */
@@ -450,13 +626,13 @@ nav button {
 
 .tamil-small {
   font-family: "Mukta Malar", serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.2;
 }
 
 .tamil-medium {
   font-family: "Mukta Malar", serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.2;
 }
 
