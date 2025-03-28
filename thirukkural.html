@@ -106,12 +106,18 @@
               id="couplets-search-bar"
             />
             <i class="bx bxs-right-arrow bx-flashing couplets-down-arrow"></i>
+             
+              <!-- <img class="couplets-down-arrow show" width="24" height="24" src="https://img.icons8.com/plumpy/24/translation.png" alt="translation"/>
+
+              <img class="couplets-down-arrow hide" width="24" height="24" src="https://img.icons8.com/material-outlined/24/abc.png" alt="abc"/>
+
+              <img class="couplets-down-arrow " width="24" height="24"  src="img/logos/language.png" alt="tamil"> -->
           </div>
           <div class="couplets-search-type">
             <ul>
-              <li class="filter-no">Number</li>
-              <li class="filter-tam">Tamil</li>
-              <li class="filter-eng" >English</li>
+              <li class="filter-eng">English <span class="tick-eng hide">✅</span></li>
+              <li class="filter-tam">Tamil <span class="tick-tam hide">✅</span></li>
+              <li class="filter-no">Number <span class="tick-no hide">✅</span></li>
             </ul>
           </div>
           <div class="couplets-result-box">
@@ -130,14 +136,16 @@
                 </p>
               </div>
             </div>
-            <div class="couplets-set-format active">
-              <span class="couplets-no">1</span>
-              <div class="couplets-name">
-                <p class="couplets">
-                  <span class="tamil-small">கடவுள் வாழ்த்து</span> / The Praise
-                  of God
-                </p>
-              </div>
+            <div id="coupletSets" class="couplets-box">
+              <!-- <div class="couplets-set-format">
+                <span class="couplets-no">1</span>
+                <div class="couplets-name">
+                  <p class="couplets">
+                    <span class="tamil-small">கடவுள் வாழ்த்து</span> / The
+                    Praise of God
+                  </p>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -153,7 +161,7 @@
                 class="kural-search-bar"
                 type="search"
                 name="search"
-                id="kural-search"
+                id="kural-search-bar"
                 placeholder="Search திருக்குறள் / Thirukkural"
               />
             </div>
@@ -270,8 +278,8 @@
 
     <!-- ====================swiper js script=========================== -->
 
-    <script src="script/main.js"></script>
     <script src="script/data.js"></script>
+    <script src="script/main.js"></script>
     <!-- -->
   </body>
 </html>

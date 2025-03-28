@@ -1,7 +1,12 @@
 [
   {
     "couplets": [
-      
+      {
+        "id": 1,
+        "title_tam": "கடவுள் வாழ்த்து",
+        "title_eng": "The Praise of God",
+        "active":"active"
+      },
       {
         "id": 2,
         "title_tam": "வான்சிறப்பு",
@@ -150,7 +155,7 @@
       {
         "id":31,
         "title_tam": "வெகுளாமை",
-        "title_11.eng": "Restraining Anger"
+        "title_eng": "Restraining Anger"
       },
       {
         "id":32,
@@ -425,7 +430,7 @@
       {
         "id":86,
         "title_tam": "இகல்",
-        "title_4eng": "Hostility"
+        "title_eng": "Hostility"
       },
       {
         "id":87,
