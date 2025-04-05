@@ -16,7 +16,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 3px;
 }
 
 /* Track */
@@ -232,9 +232,11 @@ nav button {
 }
 .format {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  padding: 24px;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  padding: 48px;
   padding-bottom: 0;
+  margin-bottom: 48px;
 }
 
 .couplets-navbar {
@@ -282,7 +284,7 @@ nav button {
   position: relative;
 }
 
-.active-tick{
+.active-tick {
   display: inline;
 }
 
@@ -291,14 +293,14 @@ nav button {
 }
 
 .show {
-  display: inline;
+  display: block;
 }
 
 .couplets-search-type {
   display: none;
 }
 
-.couplets-search-type ul{
+.couplets-search-type ul {
   width: 85px;
 }
 
@@ -319,9 +321,8 @@ nav button {
 .couplets-search-type-show {
   display: block;
   position: absolute;
-  z-index: 20;
-  left: 29%;
-  top: 12%;
+  z-index: 10;
+  transform: translate(375%, -35%);
 }
 
 .couplets-result-box {
@@ -366,7 +367,7 @@ nav button {
   justify-content: start;
   padding: 4px;
   row-gap: 10px;
-  height: 370px;
+  height: 350px;
   overflow-y: scroll;
   position: relative;
 }
@@ -431,14 +432,28 @@ nav button {
   justify-content: space-around;
 }
 
+.kural-topic {
+  display: flex;
+  position: relative;
+  align-items: baseline;
+  gap: 10px;
+}
+
 .kural-title {
   font-size: 17px;
-  margin-left: 100px;
   text-transform: uppercase;
   font-weight: 500;
 }
 
 .kural-search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.inner-kural-search {
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -446,7 +461,7 @@ nav button {
   padding: 5px 12px;
   border-radius: 30px;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.07);
-  margin-left: 120px;
+
 }
 
 .kural-search-bar {
@@ -459,11 +474,12 @@ nav button {
 
 .kural-container-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  margin-bottom: 32px;
 }
 
 .kural-def {
-  height: 370px;
+  height: 365px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -479,7 +495,7 @@ nav button {
 } */
 
 .kural-sets {
-  width: 420px;
+  width: 520px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -508,11 +524,42 @@ nav button {
 }
 
 .kural-no {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .kural-eng {
-  font-size: 13px;
+  font-size: 14px;
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+/**********************************/
+/********** KURAL_SEARCH **********/
+/**********************************/
+
+.kural-result-box {
+  /* display: none; */
+  background: linear-gradient(60deg, #fbfefc, #ebfbee);
+  height: 370px;
+  width: 450px;
+  overflow-y: scroll;
+  align-items: start;
+  position: absolute;
+  z-index: 10;
+  left: 15%;
+}
+
+.result-format {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  transition: 400ms all ease;
+}
+
+.result-format:hover {
+  cursor: pointer;
+  background: rgb(7, 185, 255);
 }
 
 /**********************************/
@@ -523,17 +570,19 @@ nav button {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
+  grid-column: span 3 / span 3;
 }
 
 .kural-heading {
   text-align: center;
-  font-size: 18px;
   border: none;
-  border-radius: 200px 10px;
+  border-radius: 20px 0;
   background-color: #b197fc;
-  padding: 3px;
-  margin: 0 180px 18px 180px;
+  padding: 10px;
+  margin: 0 180px 32px 180px;
   font-weight: 400;
+  display: inline-block;
 }
 
 .kural-tamil,
@@ -547,9 +596,9 @@ nav button {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 430px;
-  margin: 0 auto 10px;
-  padding: 7px;
+  width: 550px;
+  margin: 0 auto 24px;
+  padding: 18px;
   border-radius: 14px 10px 14px 10px;
   -webkit-border-radius: 14px 10px 14px 10px;
   -moz-border-radius: 14px 10px 14px 10px;
@@ -564,9 +613,18 @@ nav button {
   margin: 0 auto;
 }
 
+.meaning{
+  margin-bottom: 24px;
+}
+
 .meaning-eng,
 .quote-eng {
-  font-size: 13px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.quote-eng div p:first-child{
+  margin-bottom: 5px;
 }
 
 /* *********************** */
@@ -639,6 +697,7 @@ nav button {
   color: white;
 }
 
+
 /******** CENTER_ALIGN ********/
 .center {
   text-align: center;
@@ -656,19 +715,23 @@ nav button {
 
 .tamil-small {
   font-family: "Mukta Malar", serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2;
+  letter-spacing: 1.2px;
 }
 
 .tamil-medium {
   font-family: "Mukta Malar", serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2;
+  letter-spacing: 1.2px;
 }
 
 .tamil-large {
   font-family: "Mukta Malar", serif;
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
 }
 
 /******* End Of Common *******/

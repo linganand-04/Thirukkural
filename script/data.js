@@ -3,16 +3,19 @@ let posts = [];
 
 const kurActive = document.querySelectorAll(".kural-sets");
 let kural = document.querySelector(".kural-def");
-let kurMean = document.querySelector(".kural-meaning");
+
 
 function kuralfun01() {
-  fetch("./kural.json").then((res) => res.json()).then((data) => {
+  fetch("./kural.json").
+  then((res) => res.json()).
+  then((data) => {
       const thirukkural = data[0].thirukkural;
       kural.remove();
 
       let newDiv = document.createElement("div");
       newDiv.setAttribute("class", "kural-def");
       document.querySelector(".kural-container-inner").prepend(newDiv);
+      // document.querySelector(".format").prepend(newDiv);
       kural = newDiv;
 
       for (let i = 0; i < 10; i++) {
@@ -50,13 +53,14 @@ function kuralfun01() {
 
           // Add active class to the clicked one
           element.classList.add("activeKural");
-
+          let kurMean = document.querySelector(".kural-meaning");
           kurMean.remove();
 
           let newDiv = document.createElement("div");
           newDiv.setAttribute("class", "kural-meaning");
 
-          document.querySelector(".kural-container-inner").append(newDiv);
+          // document.querySelector(".kural-container-inner").append(newDiv);
+          document.querySelector(".format").append(newDiv);
           kurMean = newDiv;
 
           kurMean.insertAdjacentHTML(

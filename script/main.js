@@ -7,11 +7,10 @@
 
 // BATCH ONCLICK //
 
-let coupletsFilter = "english"
+let coupletsFilter = "english";
 
 let coupletLimit = 0;
 let coupletPost = [];
-
 
 const batch = document.querySelector(".batch");
 const batchYear = document.querySelector(".batch-year");
@@ -100,64 +99,124 @@ window.addEventListener("scroll", () => {
 
 /////////// ***** END ***** ////////////
 
-
 //  <!-- SEARCH BAR FOR COUPLETS --> //
 
 // const coupletsSearch = document.querySelector("#couplets-search-bar");
 
-const resultBox = document.querySelector(".couplets-result-box")
+const resultBox = document.querySelector(".couplets-result-box");
 
-const coupletSearch = document.querySelector('#couplets-search-bar');
-const coupletSearchBox = document.querySelector('.couplets-result-box')
-const coupletBoxDiv = document.querySelector('.couplets-result-box')
-const coupletBoxClick = document.querySelector('.couplets-result-box ul li')
+const coupletSearch = document.querySelector("#couplets-search-bar");
+const coupletSearchBox = document.querySelector(".couplets-result-box");
+const coupletBoxDiv = document.querySelector(".couplets-result-box");
+const coupletBoxClick = document.querySelector(".couplets-result-box ul li");
 
+const coupDownArr = document.querySelector(".couplets-down-arrow");
 
-const coupDownArr = document.querySelector(".couplets-down-arrow") 
+const searchDownArr = document.querySelector(".couplets-search-type");
 
-const searchDownArr = document.querySelector(".couplets-search-type") 
+const coupFilterNo = document.querySelector(".filter-no");
+const coupFilterTam = document.querySelector(".filter-tam");
+const coupFilterEng = document.querySelector(".filter-eng");
+const tickEng = document.querySelector(".tick-eng");
+const tickTam = document.querySelector(".tick-tam");
+const tickNo = document.querySelector(".tick-no");
+const tickAct = document.querySelector(".active-tick");
+const span = document.querySelectorAll("span");
 
-const coupFilterNo = document.querySelector(".filter-no") 
-const coupFilterTam = document.querySelector(".filter-tam") 
-const coupFilterEng = document.querySelector(".filter-eng") 
-const tickEng = document.querySelector(".tick-eng")
-const tickTam = document.querySelector(".tick-tam")
-const tickNo = document.querySelector(".tick-no")
-const tickAct = document.querySelector(".active-tick")
-const span = document.querySelectorAll("span")
+coupDownArr.addEventListener("click", () => {
+  searchDownArr.classList.toggle("couplets-search-type-show");
+});
 
-coupDownArr.addEventListener('click',()=>{
-     searchDownArr.classList.toggle("couplets-search-type-show")
-})
-
-coupFilterEng.addEventListener('click',()=>{
-  coupletsFilter = "english"
-  searchDownArr.classList.remove("couplets-search-type-show")
-  tickEng.classList.add("show")
-  tickTam.classList.remove("show")
-  tickNo.classList.remove("show")
+coupFilterEng.addEventListener("click", () => {
+  coupletsFilter = "english";
+  searchDownArr.classList.remove("couplets-search-type-show");
+  tickEng.classList.add("show");
+  tickTam.classList.remove("show");
+  tickNo.classList.remove("show");
   console.log(coupletsFilter);
-})
+});
 
-coupFilterTam.addEventListener('click',()=>{
-  coupletsFilter = "tamil" 
-  searchDownArr.classList.remove("couplets-search-type-show")
-  tickTam.classList.add("show")
-  tickEng.classList.remove("show")
-  tickNo.classList.remove("show")
+coupFilterTam.addEventListener("click", () => {
+  coupletsFilter = "tamil";
+  searchDownArr.classList.remove("couplets-search-type-show");
+  tickTam.classList.add("show");
+  tickEng.classList.remove("show");
+  tickNo.classList.remove("show");
   console.log(coupletsFilter);
-})
+});
 
-coupFilterNo.addEventListener('click',()=>{
+coupFilterNo.addEventListener("click", () => {
+  coupletsFilter = "number";
+  searchDownArr.classList.remove("couplets-search-type-show");
+  tickNo.classList.add("show");
+  tickEng.classList.remove("show");
+  tickTam.classList.remove("show");
+  console.log(coupletsFilter);
+});
+function meaning(thirukkural, index) {
+  let kuralMean = document.querySelector(".kural-meaning");
+  console.log(kuralMean);
+  kuralMean.remove();
+
+  let tamil_1;
+  let tamil_2;
+  let tam_meaning;
+  let english_1;
+  let english_2;
+  let eng_meaning;
   
-  coupletsFilter = "number"
-  searchDownArr.classList.remove("couplets-search-type-show")
-  tickNo.classList.add("show")
-  tickEng.classList.remove("show")
-  tickTam.classList.remove("show")
-  console.log(coupletsFilter);
-})
+  if (typeof index === 'number') {
+    tamil_1 = thirukkural[index + coupletLimit].tamil_1;
+    tamil_2 = thirukkural[index + coupletLimit].tamil_2;
+    tam_meaning = thirukkural[index + coupletLimit].tam_meaning;
+    english_1 = thirukkural[index + coupletLimit].english_1;
+    english_2 = thirukkural[index + coupletLimit].english_2;
+    eng_meaning = thirukkural[index + coupletLimit].eng_meaning;
+  } else {
+    tamil_1 = thirukkural.tamil_1;
+    tamil_2 = thirukkural.tamil_2;
+    tam_meaning = thirukkural.tam_meaning;
+    english_1 = thirukkural.english_1;
+    english_2 = thirukkural.english_2;
+    eng_meaning = thirukkural.eng_meaning;
+  }
+  
+  let newDiv = document.createElement("div");
+  newDiv.setAttribute("class", "kural-meaning");
 
+  // document.querySelector(".kural-container-inner").append(newDiv);
+  document.querySelector(".format").append(newDiv);
+  kuralMean = newDiv;
+
+  kuralMean.insertAdjacentHTML(
+    "beforeend",
+    `<div class="kural-tamil">
+                <p class="kural-heading tamil-large">தமிழ்</p>
+                <div class="quote-tam">
+                <div>
+                  <p class="kural-line-1 tamil-small">${tamil_1}</p>
+                  <p class="kural-line-2 tamil-small">${tamil_2}.</p>
+                </div>
+                </div>
+                <div class="meaning">
+                  <p class="tamil-small">${tam_meaning}.</p>
+                </div>
+              </div>
+
+              <div class="kural-english">
+                <p class="kural-heading">English</p>
+                <div class="quote-eng">
+                <div>
+                  <p>${english_1}</p>
+                  <p>${english_2}</p>
+                </div>  
+                </div>
+                <div class="meaning">
+                  <p class="meaning-eng">${eng_meaning}</p>
+                </div>
+              </div>`
+  );
+}
 function kuralfun() {
   fetch("./kural.json")
     .then((res) => res.json())
@@ -168,6 +227,7 @@ function kuralfun() {
       let newDiv = document.createElement("div");
       newDiv.setAttribute("class", "kural-def");
       document.querySelector(".kural-container-inner").prepend(newDiv);
+      // document.querySelector(".format").prepend(newDiv);
       kural = newDiv;
 
       // console.log(coupletLimit);
@@ -177,7 +237,9 @@ function kuralfun() {
           `
           <div>
           <div class="kural-sets">
-            <span class="kural-no">${thirukkural[i + coupletLimit].kural}.</span>
+            <span class="kural-no">${
+              thirukkural[i + coupletLimit].kural
+            }.</span>
             <div class="kural-pack">
               <div>
                 <p class="kural-line-1 tamil-small">${
@@ -187,8 +249,12 @@ function kuralfun() {
                   thirukkural[i + coupletLimit].tamil_2
                 }.</p>
               </div>
-              <p class="kural-eng">${thirukkural[i + coupletLimit].english_1}</p>
-              <p class="kural-eng">${thirukkural[i + coupletLimit].english_2}</p>
+              <p class="kural-eng">${
+                thirukkural[i + coupletLimit].english_1
+              }</p>
+              <p class="kural-eng">${
+                thirukkural[i + coupletLimit].english_2
+              }</p>
             </div>
           </div>
         </div>
@@ -206,122 +272,80 @@ function kuralfun() {
 
           // Add active class to the clicked one
           element.classList.add("activeKural");
-
-          kurMean.remove();
-
-          let newDiv = document.createElement("div");
-          newDiv.setAttribute("class", "kural-meaning");
-
-          document.querySelector(".kural-container-inner").append(newDiv);
-          kurMean = newDiv;
-
-          kurMean.insertAdjacentHTML(
-            "beforeend",
-            `<div class="kural-tamil">
-                <p class="kural-heading tamil-large">தமிழ்</p>
-                <div class="quote-tam">
-                <div>
-                  <p class="kural-line-1 tamil-small">${
-                    thirukkural[index + coupletLimit].tamil_1
-                  }</p>
-                  <p class="kural-line-2 tamil-small">${
-                    thirukkural[index + coupletLimit].tamil_2
-                  }.</p>
-                </div>
-                </div>
-                <div class="meaning">
-                  <p class="tamil-small">${
-                    thirukkural[index + coupletLimit].tam_meaning
-                  }.</p>
-                </div>
-              </div>
-
-              <div class="kural-english">
-                <p class="kural-heading">English</p>
-                <div class="quote-eng">
-                <div>
-                  <p>${thirukkural[index + coupletLimit].english_1}</p>
-                  <p>${thirukkural[index + coupletLimit].english_2}</p>
-                </div>  
-                </div>
-                <div class="meaning">
-                  <p class="meaning-eng">${
-                    thirukkural[index + coupletLimit].eng_meaning
-                  }</p>
-                </div>
-              </div>`
-          );
+          console.log(index);
+          meaning(thirukkural, index);
         });
       });
     })
     .catch((err) => console.log(err));
 }
 
-
-fetch('./couplets.json')
+fetch("./couplets.json")
   .then((key) => key.json())
   .then((data) => {
     let searchData = data[0].couplets;
     const kuralCouplets = [...new Set(searchData.map((couplets) => couplets))];
 
-    console.log(kuralCouplets);
+    // console.log(kuralCouplets);
 
-    document.querySelector("#couplets-search-bar").addEventListener("keyup", (e) => {
-      let inputData = e.target.value; // Convert input to lowercase
+    document
+      .querySelector("#couplets-search-bar")
+      .addEventListener("keyup", (e) => {
+        let inputData = e.target.value; // Convert input to lowercase
 
-      let filterData = kuralCouplets.filter((couplets) => {
-        if(coupletsFilter==="english"){
-          return (couplets.title_eng.toLowerCase().includes(inputData.toLowerCase()));
-        }
+        let filterData = kuralCouplets.filter((couplets) => {
+          if (coupletsFilter === "english") {
+            console.log(couplets.title_eng);
+            return couplets.title_eng
+              .toLowerCase()
+              .includes(inputData.toLowerCase());
+          }
 
-        if (coupletsFilter==="tamil") {
-          return (couplets.title_tam.includes(inputData));
-        }
-        if (coupletsFilter==="number") {
-          console.log(couplets.id,inputData);
-          return (String(couplets.id).includes(inputData));
-        }
+          if (coupletsFilter === "tamil") {
+            return couplets.title_tam.includes(inputData);
+          }
+          if (coupletsFilter === "number") {
+            return String(couplets.id).includes(inputData);
+          }
+        });
+
+        console.log(filterData);
+
+        coupletPost = [];
+        displayItems(filterData); // Ensure displayItems() is defined
       });
-
-      console.log(filterData);
-
-      coupletPost = [];
-      displayItems(filterData); // Ensure displayItems() is defined
-    });
   });
 
+const displayItems = (items) => {
+  document.querySelector("#coupletSets").innerHTML = items
+    .map((items) => {
+      let { id, title_tam, title_eng } = items;
+      coupletPost.push(id);
 
-
-const displayItems = (items)=>{
-  document.querySelector("#coupletSets").innerHTML = items.map((items)=>{
-    let {id,title_tam,title_eng} = items;
-    coupletPost.push(id);
-    
-    return (`
+      return `
     <div class="couplets-set-format">
           <span class="couplets-no">${id}.</span>
           <div class="couplets-name">
             <p class="couplets"><span class="tamil-small">${title_tam}</span>  /  ${title_eng}</p>
           </div>
         </div>
-    `)
-    
-  }).join('')
- 
+    `;
+    })
+    .join("");
+
   // Select elements AFTER insertion
   const coupletsShow = document.querySelectorAll(".couplets-set-format");
 
-  
   // Attach event listeners
   coupletsShow.forEach((element, i) => {
     element.addEventListener("click", () => {
-      coupletsShow.forEach((value) => { 
-        return value.classList.remove("active")
-      })
+      coupletsShow.forEach((value) => {
+        return value.classList.remove("active");
+      });
       console.log(element.classList);
       element.classList.add("active");
-      
-      displayItems((items))
+
+      displayItems(items);
 
       switch (coupletPost[i]) {
         case 1:
@@ -728,19 +752,94 @@ const displayItems = (items)=>{
       kuralfun();
     });
   });
-}
-
+};
 
 // SEARCH BAR FOR KURAL CONTAINER //
 
-const kuralInput = document.querySelector("#kural-search-bar")
+const kuralInput = document.querySelector("#kural-search-bar");
+const kuralResBox = document.querySelector(".kural-result-box");
 
-kuralInput.addEventListener("keydown",(e)=>{
-  if (e.key === "Enter") {
-    console.log(kuralInput.value);
-    let searchData = kuralInput.value.toLowerCase()
-    console.log(searchData);
-    kuralInput.textContent = " "
-  }
+kuralInput.addEventListener("keyup", (e) => {
+  kuralResBox.classList.remove("hide");
+  kuralResBox.classList.add("show");
 
-})
+  kuralResBox.classList.add("animate__fadeIn");
+  kuralResBox.classList.remove("animate__fadeOut");
+
+  // CANCEL
+  body.addEventListener("click", () => {
+    kuralResBox.classList.add("animate__fadeOut");
+    kuralResBox.classList.remove("animate__fadeIn");
+    // kuralResBox.classList.add("hide");
+    kuralResBox.classList.remove("show");
+    // searchDownArr.classList.add("couplets-search-type")
+  });
+  // END - CANCEL
+
+  fetch("./kural.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const kural = data[0].thirukkural;
+      const kuralData = [...new Set(kural.map((kuralMean) => kuralMean))];
+
+      kuralInput.addEventListener("keyup", (e) => {
+        let searchData = e.target.value;
+        let filterData = kuralData.filter((couplets) => {
+          if (coupletsFilter === "english") {
+            return couplets.english_1
+              .toLowerCase()
+              .includes(searchData.toLowerCase());
+          }
+
+          if (coupletsFilter === "tamil") {
+            return couplets.tamil_1.includes(searchData);
+          }
+          if (coupletsFilter === "number") {
+            return String(couplets.id).includes(searchData);
+          }
+        });
+
+        console.log(filterData);
+
+        KuralPost = [];
+        displayKural(filterData);
+        const showKural = document.querySelectorAll(".result-format");
+
+        showKural.forEach((element, index) => {
+          element.addEventListener("click", () => {
+            meaning(filterData[index]);
+          });
+        });
+      });
+    });
+});
+
+const displayKural = (kural) => {
+  kuralResBox.innerHTML = kural
+    .map((kural) => {
+      let { id, english_1, english_2, tamil_1, tamil_2 } = kural;
+      KuralPost.push(id);
+
+      return `
+          <div class="result-format">
+              <span class="kural-no">${id}.</span>
+              <div class="kural-pack">
+                  <div>
+                    <p class="kural-line-1 tamil-small">
+                    ${tamil_1}
+                    </p>
+                    <p class="kural-line-2 tamil-small">
+                    ${tamil_2}.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p class="kural-eng">${english_1}</p>
+                    <p class="kural-eng">${english_2}</p>
+                  </div>
+              </div>
+          </div>
+          `;
+    })
+    .join("");
+};
