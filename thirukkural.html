@@ -88,7 +88,7 @@
               <ul>
                 <li><a href="profileCard23.html">Batch 2023</a></li>
                 <li><a href="profileCard24.html">Batch 2024</a></li>
-                <li><a href="profileCard25.html">Batch 2025</a></li>
+                <!-- <li><a href="profileCard25.html">Batch 2025</a></li> -->
               </ul>
             </div>
           </li>
@@ -103,21 +103,25 @@
     <section class="kural">
       <div class="format">
         <div class="couplets-section">
+          <hr class="tempscroll" id="tempscroll"></hr>
           <!-- Couplets Navbar -->
 
           <div class="couplets-navbar">
             <box-icon id="couplets-search-icon" name="search-alt-2"></box-icon>
-            <input
+            
+            <!-- <a id="scrollsearch"> -->
+              <input
               type="search"
               placeholder="Search அதிகாரம் / Couplets"
               name="couplets-search-bar"
               id="couplets-search-bar"
             />
-            <i class="bx bxs-down-arrow bx-flashing couplets-down-arrow"></i>
-
+          <!-- </a> -->
+          
           </div>
           <div class="couplets-search-type">
             <ul>
+              <li id="filter-topic">Search Type</li>
               <li class="filter-eng">
                 English <span class="tick-eng hide">✅</span>
               </li>
@@ -129,7 +133,6 @@
               </li>
             </ul>
           </div>
-          
 
           <!-- Couplets Content -->
           <div class="couplets-sets">
@@ -137,7 +140,7 @@
               <span class="couplets-no"></span>
               <div class="couplets-name mar-center">
                 <p class="couplets">
-                  <span class="tamil-small">அதிகாரம்</span> / Couplets
+                  <span class="tamil-small">அதிகாரம்</span> / <span class="kural-eng">Couplets</span>
                 </p>
               </div>
             </div>
@@ -163,17 +166,22 @@
               </p>
             </div>
 
-            
-
             <div class="kural-search">
-              <div class="inner-kural-search" >
+              <div class="search-type">
+                <p class="search-type-title">Search by</p>
+                <i class="bx bxs-down-arrow bx-flashing couplets-down-arrow"
+                ></i>
+                <!-- <box-icon class="kural-cancel" name='x' ></box-icon> -->
+              </div>
+
+              <div class="inner-kural-search">
                 <box-icon id="kural-search-icon" name="search-alt-2"></box-icon>
                 <input
-                class="kural-search-bar"
-                type="search"
-                name="search"
-                id="kural-search-bar"
-                placeholder="Search திருக்குறள் / Thirukkural"
+                  class="kural-search-bar"
+                  type="search"
+                  name="search"
+                  id="kural-search-bar"
+                  placeholder="Search திருக்குறள் / Thirukkural"
                 />
               </div>
 
@@ -181,9 +189,7 @@
                 <div class="kural-result-box animate__animated hide"></div>
               </div>
             </div>
-            
           </div>
-
 
           <div class="kural-container-inner">
             <div class="kural-def">
@@ -201,11 +207,8 @@
             <!-- Temp -->
             <!-- <div class="kural-meaning">
             </div> -->
-            
           </div>
         </div>
-      </div>
-      <div class="kural-meaning">
       </div>
     </section>
 

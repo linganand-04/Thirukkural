@@ -4,11 +4,10 @@ let posts = [];
 const kurActive = document.querySelectorAll(".kural-sets");
 let kural = document.querySelector(".kural-def");
 
-
 function kuralfun01() {
-  fetch("./kural.json").
-  then((res) => res.json()).
-  then((data) => {
+  fetch("./kural.json")
+    .then((res) => res.json())
+    .then((data) => {
       const thirukkural = data[0].thirukkural;
       kural.remove();
 
@@ -54,21 +53,27 @@ function kuralfun01() {
           // Add active class to the clicked one
           element.classList.add("activeKural");
           let kurMean = document.querySelector(".kural-meaning");
-          kurMean.remove();
+          // kurMean.remove();
 
           let newDiv = document.createElement("div");
           newDiv.setAttribute("class", "kural-meaning");
 
-          // document.querySelector(".kural-container-inner").append(newDiv);
-          document.querySelector(".format").append(newDiv);
+          document.querySelector(".kural-container-inner").append(newDiv);
+
+          // When clicked kural create newDiv in the bottom of the Format Container..
+          // document.querySelector(".format").append(newDiv);
+
           kurMean = newDiv;
+          kurMean.style.height = "500px";
 
           kurMean.insertAdjacentHTML(
             "beforeend",
             `<div class="kural-tamil">
-                <p class="kural-heading tamil-large">தமிழ்</p>
-                <div class="quote-tam">
-                <div>
+              <box-icon title="close" class="kural-cancel" name='x' ></box-icon>
+              <p class="kural-heading tamil-large">தமிழ்</p>
+              <div class="kural-tam-box">
+              <div class="quote-tam">
+             <div>
                   <p class="kural-line-1 tamil-small">${
                     thirukkural[index + limit].tamil_1
                   }</p>
@@ -78,14 +83,16 @@ function kuralfun01() {
                 </div>
                 </div>
                 <div class="meaning">
-                  <p class="tamil-small">${
+                  <p class="tamil-small"> பொருள் : ${
                     thirukkural[index + limit].tam_meaning
                   }.</p>
                 </div>
               </div>
+              </div>
 
               <div class="kural-english">
                 <p class="kural-heading">English</p>
+                <div class="kural-eng-box">
                 <div class="quote-eng">
                 <div>
                   <p>${thirukkural[index + limit].english_1}</p>
@@ -93,12 +100,18 @@ function kuralfun01() {
                 </div>  
                 </div>
                 <div class="meaning">
-                  <p class="meaning-eng">${
+                  <p class="meaning-eng">Meaning : ${
                     thirukkural[index + limit].eng_meaning
                   }</p>
+                  </div>
                 </div>
               </div>`
           );
+          let kuralCancel = document.querySelector(".kural-cancel");
+
+          kuralCancel.addEventListener("click", () => {
+            kurMean.remove();
+          });
         });
       });
     })
@@ -119,7 +132,7 @@ fetch("./couplets.json")
         <div class="couplets-set-format ${post.active}">
           <span class="couplets-no">${post.id}.</span>
           <div class="couplets-name">
-            <p class="couplets"><span class="tamil-small">${post.title_tam}</span>  /  ${post.title_eng}</p>
+            <p class="couplets"><span class="tamil-small">${post.title_tam}</span>  / <span class="kural-eng"> ${post.title_eng}</span></p>
           </div>
         </div>
         `
@@ -137,7 +150,6 @@ fetch("./couplets.json")
         element.classList.add("active");
 
         // console.log(posts[i]);
-        
 
         // Using switch instead of multiple ifs
         switch (posts[i]) {
@@ -550,12 +562,9 @@ fetch("./couplets.json")
 
 // <--********** SHOW KURAL **********--> //
 
-
-
 kuralfun01();
 
-function selectInput(details){
+function selectInput(details) {
   coupletSearch.value = details.innerHTML;
   kuralfun01();
 }
-

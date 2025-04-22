@@ -5,6 +5,41 @@
 
 // End //
 
+// SEARCH SCROLL NAVIGATOR USING ONCLICK //
+
+const searchOnclick = document.querySelector("#couplets-search-bar")
+const scrollsearch = document.getElementById("scrollsearch");
+
+const scrollCouplets = document.querySelector(".couplets-section")
+
+function onclickScroll(){
+  searchOnclick.addEventListener("click",(e)=>{
+    console.log(searchOnclick);
+    // if (scrollsearch.href==="http://127.0.0.1:5501/thirukkural.html") {
+      console.log("J");
+      scrollsearch.setAttribute("href","#tempscroll")
+      console.log(scrollsearch.href)
+    
+    // }
+    if (scrollsearch.href==="http://127.0.0.1:5501/thirukkural.html#tempscroll") {
+      console.log("Hii");
+    }
+  })
+}
+
+
+function checkScreenWidth() {
+  if (window.innerWidth < 900) {
+    onclickScroll()
+  }
+}
+
+// Run on page load
+checkScreenWidth();
+
+// Run on resize
+window.addEventListener("resize", checkScreenWidth);
+
 // BATCH ONCLICK //
 
 let coupletsFilter = "english";
@@ -110,7 +145,7 @@ const coupletSearchBox = document.querySelector(".couplets-result-box");
 const coupletBoxDiv = document.querySelector(".couplets-result-box");
 const coupletBoxClick = document.querySelector(".couplets-result-box ul li");
 
-const coupDownArr = document.querySelector(".couplets-down-arrow");
+const coupDownArr = document.querySelectorAll(".couplets-down-arrow");
 
 const searchDownArr = document.querySelector(".couplets-search-type");
 
@@ -123,8 +158,10 @@ const tickNo = document.querySelector(".tick-no");
 const tickAct = document.querySelector(".active-tick");
 const span = document.querySelectorAll("span");
 
-coupDownArr.addEventListener("click", () => {
-  searchDownArr.classList.toggle("couplets-search-type-show");
+coupDownArr.forEach((item) => {
+  item.addEventListener("click", () => {
+    searchDownArr.classList.toggle("couplets-search-type-show");
+  });
 });
 
 coupFilterEng.addEventListener("click", () => {
@@ -156,7 +193,8 @@ coupFilterNo.addEventListener("click", () => {
 function meaning(thirukkural, index) {
   let kuralMean = document.querySelector(".kural-meaning");
   console.log(kuralMean);
-  kuralMean.remove();
+  // Temp //
+  // kuralMean.remove();
 
   let tamil_1;
   let tamil_2;
@@ -164,8 +202,8 @@ function meaning(thirukkural, index) {
   let english_1;
   let english_2;
   let eng_meaning;
-  
-  if (typeof index === 'number') {
+
+  if (typeof index === "number") {
     tamil_1 = thirukkural[index + coupletLimit].tamil_1;
     tamil_2 = thirukkural[index + coupletLimit].tamil_2;
     tam_meaning = thirukkural[index + coupletLimit].tam_meaning;
@@ -180,21 +218,25 @@ function meaning(thirukkural, index) {
     english_2 = thirukkural.english_2;
     eng_meaning = thirukkural.eng_meaning;
   }
-  
+
   let newDiv = document.createElement("div");
   newDiv.setAttribute("class", "kural-meaning");
 
-  // document.querySelector(".kural-container-inner").append(newDiv);
-  document.querySelector(".format").append(newDiv);
+  document.querySelector(".kural-container-inner").append(newDiv);
+
+  // When clicked kural create newDiv in the bottom of the Format Container..
+  // document.querySelector(".format").append(newDiv);
   kuralMean = newDiv;
 
+  kuralMean.style.height = "500px";
   kuralMean.insertAdjacentHTML(
     "beforeend",
     `<div class="kural-tamil">
-                <p class="kural-heading tamil-large">தமிழ்</p>
-                <div class="quote-tam">
-                <div>
-                  <p class="kural-line-1 tamil-small">${tamil_1}</p>
+              <box-icon title="Close" class="kural-cancel" name='x' ></box-icon>
+              <p class="kural-heading tamil-large">தமிழ்</p>
+              <div class="quote-tam">
+              <div>
+                <p class="kural-line-1 tamil-small">${tamil_1}</p>
                   <p class="kural-line-2 tamil-small">${tamil_2}.</p>
                 </div>
                 </div>
@@ -216,6 +258,11 @@ function meaning(thirukkural, index) {
                 </div>
               </div>`
   );
+  let kuralCancel = document.querySelector(".kural-cancel");
+
+  kuralCancel.addEventListener("click", () => {
+    kuralMean.remove();
+  });
 }
 function kuralfun() {
   fetch("./kural.json")
@@ -340,7 +387,7 @@ const displayItems = (items) => {
   coupletsShow.forEach((element, i) => {
     element.addEventListener("click", () => {
       coupletsShow.forEach((value) => {
-        return value.classList.remove("active");
+        value.classList.remove("active");
       });
       console.log(element.classList);
       element.classList.add("active");
@@ -770,9 +817,8 @@ kuralInput.addEventListener("keyup", (e) => {
   body.addEventListener("click", () => {
     kuralResBox.classList.add("animate__fadeOut");
     kuralResBox.classList.remove("animate__fadeIn");
-    // kuralResBox.classList.add("hide");
     kuralResBox.classList.remove("show");
-    // searchDownArr.classList.add("couplets-search-type")
+    kuralResBox.classList.add("hide");
   });
   // END - CANCEL
 
