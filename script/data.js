@@ -2,24 +2,137 @@ let limit = 0;
 let posts = [];
 
 const kurActive = document.querySelectorAll(".kural-sets");
+let kural = document.querySelector(".kural-def");
 
+function kuralfun01() {
+  fetch("./kural.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const thirukkural = data[0].thirukkural;
+      kural.remove();
 
+      let newDiv = document.createElement("div");
+      newDiv.setAttribute("class", "kural-def");
+      document.querySelector(".kural-container-inner").prepend(newDiv);
+      // document.querySelector(".format").prepend(newDiv);
+      kural = newDiv;
+
+      for (let i = 0; i < 10; i++) {
+        kural.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div>
+          <div class="kural-sets">
+            <span class="kural-no">${thirukkural[i + limit].kural}.</span>
+            <div class="kural-pack">
+              <div>
+                <p class="kural-line-1 tamil-small">${
+                  thirukkural[i + limit].tamil_1
+                }</p>
+                <p class="kural-line-2 tamil-small">${
+                  thirukkural[i + limit].tamil_2
+                }.</p>
+              </div>
+              <p class="kural-eng">${thirukkural[i + limit].english_1}</p>
+              <p class="kural-eng">${thirukkural[i + limit].english_2}</p>
+            </div>
+          </div>
+        </div>
+        `
+        );
+      }
+
+      // Select new kural elements and add event listeners
+      const kuralset = document.querySelectorAll(".kural-sets");
+
+      kuralset.forEach((element, index) => {
+        element.addEventListener("click", () => {
+          // Remove active class from all kural items first
+          kuralset.forEach((value) => value.classList.remove("activeKural"));
+
+          // Add active class to the clicked one
+          element.classList.add("activeKural");
+          let kurMean = document.querySelector(".kural-meaning");
+          // kurMean.remove();
+
+          let newDiv = document.createElement("div");
+          newDiv.setAttribute("class", "kural-meaning");
+
+          document.querySelector(".kural-container-inner").append(newDiv);
+
+          // When clicked kural create newDiv in the bottom of the Format Container..
+          // document.querySelector(".format").append(newDiv);
+
+          kurMean = newDiv;
+          kurMean.style.height = "500px";
+
+          kurMean.insertAdjacentHTML(
+            "beforeend",
+            `<div class="kural-tamil">
+              <box-icon title="close" class="kural-cancel" name='x' ></box-icon>
+              <p class="kural-heading tamil-large">தமிழ்</p>
+              <div class="kural-tam-box">
+              <div class="quote-tam">
+             <div>
+                  <p class="kural-line-1 tamil-small">${
+                    thirukkural[index + limit].tamil_1
+                  }</p>
+                  <p class="kural-line-2 tamil-small">${
+                    thirukkural[index + limit].tamil_2
+                  }.</p>
+                </div>
+                </div>
+                <div class="meaning">
+                  <p class="tamil-small"> பொருள் : ${
+                    thirukkural[index + limit].tam_meaning
+                  }.</p>
+                </div>
+              </div>
+              </div>
+
+              <div class="kural-english">
+                <p class="kural-heading">English</p>
+                <div class="kural-eng-box">
+                <div class="quote-eng">
+                <div>
+                  <p>${thirukkural[index + limit].english_1}</p>
+                  <p>${thirukkural[index + limit].english_2}</p>
+                </div>  
+                </div>
+                <div class="meaning">
+                  <p class="meaning-eng">Meaning : ${
+                    thirukkural[index + limit].eng_meaning
+                  }</p>
+                  </div>
+                </div>
+              </div>`
+          );
+          let kuralCancel = document.querySelector(".kural-cancel");
+
+          kuralCancel.addEventListener("click", () => {
+            kurMean.remove();
+          });
+        });
+      });
+    })
+    .catch((err) => console.log(err));
+}
 
 fetch("./couplets.json")
   .then((res) => res.json())
   .then((data) => {
     const athikaram = data[0].couplets;
-    const couplets = document.querySelector(".couplets-sets");
+    const couplets = document.querySelector("#coupletSets");
 
     // Insert all couplets
     athikaram.forEach((post) => {
       couplets.insertAdjacentHTML(
         "beforeend",
         `
-        <div class="couplets-set-format">
+        <div class="couplets-set-format ${post.active}">
           <span class="couplets-no">${post.id}.</span>
           <div class="couplets-name">
-            <p class="couplets"><span class="tamil-small">${post.title_tam}</span> / ${post.title_eng}</p>
+            <p class="couplets"><span class="tamil-small">${post.title_tam}</span>  / <span class="kural-eng"> ${post.title_eng}</span></p>
           </div>
         </div>
         `
@@ -35,6 +148,8 @@ fetch("./couplets.json")
       element.addEventListener("click", () => {
         coupletsShow.forEach((value) => value.classList.remove("active"));
         element.classList.add("active");
+
+        // console.log(posts[i]);
 
         // Using switch instead of multiple ifs
         switch (posts[i]) {
@@ -438,8 +553,8 @@ fetch("./couplets.json")
             limit = 1320;
             break;
         }
-
-        kuralfun();
+        kuralfun01();
+        console.log(limit);
       });
     });
   })
@@ -447,111 +562,9 @@ fetch("./couplets.json")
 
 // <--********** SHOW KURAL **********--> //
 
-let kural = document.querySelector(".kural-def");
-let kurMean = document.querySelector(".kural-meaning");
+kuralfun01();
 
-function kuralfun() {
-  fetch("./kural.json")
-    .then((res) => res.json())
-    .then((data) => {
-      const thirukkural = data[0].thirukkural;
-      kural.remove();
-
-      let newDiv = document.createElement("div");
-      newDiv.setAttribute("class", "kural-def");
-      document.querySelector(".kural-container-inner").prepend(newDiv);
-      kural = newDiv;
-
-      for (let i = 0; i < 10; i++) {
-        kural.insertAdjacentHTML(
-          "beforeend",
-          `
-          <div>
-          <div class="kural-sets">
-            <span class="kural-no">${thirukkural[i + limit].kural}.</span>
-            <div class="kural-pack">
-              <div>
-                <p class="kural-line-1 tamil-small">${
-                  thirukkural[i + limit].tamil_1
-                }</p>
-                <p class="kural-line-2 tamil-small">${
-                  thirukkural[i + limit].tamil_2
-                }.</p>
-              </div>
-              <p class="kural-eng">${thirukkural[i + limit].english_1}</p>
-              <p class="kural-eng">${thirukkural[i + limit].english_2}</p>
-            </div>
-          </div>
-        </div>
-        `
-        );
-      }
-
-      // Select new kural elements and add event listeners
-      const kuralset = document.querySelectorAll(".kural-sets");
-
-      kuralset.forEach((element, index) => {
-        element.addEventListener("click", () => {
-          // Remove active class from all kural items first
-          kuralset.forEach((value) => value.classList.remove("activeKural"));
-
-          // Add active class to the clicked one
-          element.classList.add("activeKural");
-
-          kurMean.remove();
-
-          let newDiv = document.createElement("div");
-          newDiv.setAttribute("class", "kural-meaning");
-
-          document.querySelector(".kural-container-inner").append(newDiv);
-          kurMean = newDiv;
-
-          kurMean.insertAdjacentHTML(
-            "beforeend",
-            `<div class="kural-tamil">
-                <p class="kural-heading tamil-large">தமிழ்</p>
-                <div class="quote-tam">
-                <div>
-                  <p class="kural-line-1 tamil-small">${
-                    thirukkural[index + limit].tamil_1
-                  }</p>
-                  <p class="kural-line-2 tamil-small">${
-                    thirukkural[index + limit].tamil_2
-                  }.</p>
-                </div>
-                </div>
-                <div class="meaning">
-                  <p class="tamil-small">${
-                    thirukkural[index + limit].tam_meaning
-                  }.</p>
-                </div>
-              </div>
-
-              <div class="kural-english">
-                <p class="kural-heading">English</p>
-                <div class="quote-eng">
-                <div>
-                  <p>${thirukkural[index + limit].english_1}</p>
-                  <p>${thirukkural[index + limit].english_2}</p>
-                </div>  
-                </div>
-                <div class="meaning">
-                  <p class="meaning-eng">${
-                    thirukkural[index + limit].eng_meaning
-                  }</p>
-                </div>
-              </div>`
-          );
-        });
-      });
-    })
-    .catch((err) => console.log(err));
+function selectInput(details) {
+  coupletSearch.value = details.innerHTML;
+  kuralfun01();
 }
-
-kuralfun();
-
-// function selectInput(details){
-//   coupletSearch.value = details.innerHTML;
-//   kuralfun();
-// }
-

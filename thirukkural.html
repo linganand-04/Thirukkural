@@ -32,6 +32,13 @@
       rel="stylesheet"
     />
 
+    <!-- CSS ANIMATION -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
     <!-- ============================= -->
@@ -81,6 +88,7 @@
               <ul>
                 <li><a href="profileCard23.html">Batch 2023</a></li>
                 <li><a href="profileCard24.html">Batch 2024</a></li>
+                <!-- <li><a href="profileCard25.html">Batch 2025</a></li> -->
               </ul>
             </div>
           </li>
@@ -95,28 +103,34 @@
     <section class="kural">
       <div class="format">
         <div class="couplets-section">
+          <hr class="tempscroll" id="tempscroll"></hr>
           <!-- Couplets Navbar -->
 
           <div class="couplets-navbar">
             <box-icon id="couplets-search-icon" name="search-alt-2"></box-icon>
-            <input
+            
+            <!-- <a id="scrollsearch"> -->
+              <input
               type="search"
               placeholder="Search அதிகாரம் / Couplets"
               name="couplets-search-bar"
               id="couplets-search-bar"
             />
-            <i class="bx bxs-right-arrow bx-flashing couplets-down-arrow"></i>
+          <!-- </a> -->
+          
           </div>
           <div class="couplets-search-type">
             <ul>
-              <li class="filter-no">Number</li>
-              <li class="filter-tam">Tamil</li>
-              <li class="filter-eng" >English</li>
-            </ul>
-          </div>
-          <div class="couplets-result-box">
-            <ul>
-              <!-- <li>Javacsript</li> -->
+              <li id="filter-topic">Search Type</li>
+              <li class="filter-eng">
+                English <span class="tick-eng hide">✅</span>
+              </li>
+              <li class="filter-tam">
+                Tamil <span class="tick-tam hide">✅</span>
+              </li>
+              <li class="filter-no">
+                Number <span class="tick-no hide">✅</span>
+              </li>
             </ul>
           </div>
 
@@ -126,36 +140,54 @@
               <span class="couplets-no"></span>
               <div class="couplets-name mar-center">
                 <p class="couplets">
-                  <span class="tamil-small">அதிகாரம்</span> / Couplets
+                  <span class="tamil-small">அதிகாரம்</span> / <span class="kural-eng">Couplets</span>
                 </p>
               </div>
             </div>
-            <div class="couplets-set-format active">
-              <span class="couplets-no">1</span>
-              <div class="couplets-name">
-                <p class="couplets">
-                  <span class="tamil-small">கடவுள் வாழ்த்து</span> / The Praise
-                  of God
-                </p>
-              </div>
+            <div id="coupletSets" class="couplets-box">
+              <!-- <div class="couplets-set-format">
+                <span class="couplets-no">1</span>
+                <div class="couplets-name">
+                  <p class="couplets">
+                    <span class="tamil-small">கடவுள் வாழ்த்து</span> / The
+                    Praise of God
+                  </p>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
 
         <div class="kural-container">
           <div class="kural-navbar">
-            <p class="kural-title">
-              <span class="tamil-large">திருக்குறள்</span> / Thirukkural
-            </p>
+            <div class="kural-topic">
+              <p class="kural-title">
+                <span class="tamil-large">திருக்குறள்</span> / Thirukkural
+              </p>
+            </div>
+
             <div class="kural-search">
-              <box-icon id="kural-search-icon" name="search-alt-2"></box-icon>
-              <input
-                class="kural-search-bar"
-                type="search"
-                name="search"
-                id="kural-search"
-                placeholder="Search திருக்குறள் / Thirukkural"
-              />
+              <div class="search-type">
+                <p class="search-type-title">Search by</p>
+                <i class="bx bxs-down-arrow bx-flashing couplets-down-arrow"
+                ></i>
+                <!-- <box-icon class="kural-cancel" name='x' ></box-icon> -->
+              </div>
+
+              <div class="inner-kural-search">
+                <box-icon id="kural-search-icon" name="search-alt-2"></box-icon>
+                <input
+                  class="kural-search-bar"
+                  type="search"
+                  name="search"
+                  id="kural-search-bar"
+                  placeholder="Search திருக்குறள் / Thirukkural"
+                />
+              </div>
+
+              <div class="kural-show">
+                <div class="kural-result-box animate__animated hide"></div>
+              </div>
             </div>
           </div>
 
@@ -172,43 +204,9 @@
                 </div>
               </div> -->
             </div>
-
-            <div class="kural-meaning">
-              <!-- <div class="kural-tamil">
-                <p class="kural-heading tamil-large">தமிழ்</p>
-                <div class="quote-tam">
-                  <p class="kural-line-1 tamil-medium">
-                    அகர முதல எழுத்தெல்லாம் ஆதி
-                  </p>
-                  <p class="kural-line-2 tamil-medium">பகவன் முதற்றே உலகு.</p>
-                </div>
-
-                <div class="meaning">
-                  <p class="tamil-medium">
-                    எழுத்துக்கள் எல்லாம் அகரத்தை அடிப்படையாக கொண்டிருக்கின்றன.
-                    அதுபோல உலகம் கடவுளை அடிப்படையாக கொண்டிருக்கிறது.
-                  </p>
-                </div>
-              </div>
-
-              <div class="kural-english">
-                <p class="kural-heading">English</p>
-                <div class="quote-eng">
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Nemo beatae quae cumque assumenda dolor at, id, illum natus
-                  </p>
-                </div>
-
-                <div class="meaning">
-                  <p class="meaning-eng">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil iure sapiente expedita praesentium reprehenderit a
-                    amet iusto ipsa distinctio maxime officia natus nam
-                  </p>
-                </div>
-              </div> -->
-            </div>
+            <!-- Temp -->
+            <!-- <div class="kural-meaning">
+            </div> -->
           </div>
         </div>
       </div>
@@ -234,7 +232,7 @@
             <a class="student-link" href="#">
               <img
                 class="student-img"
-                src="img/logos/Linganand.jpg"
+                src="img/logos/Deepika.jpg"
                 alt="Deepika img missing"
               />
               <h4 class="student-name">Deepika</h4>
@@ -244,7 +242,7 @@
             <a class="student-link" href="#">
               <img
                 class="student-img"
-                src="img/logos/Linganand.jpg"
+                src="img/logos/Kamalesh.jpg"
                 alt="Kamalesh img missing"
               />
               <h4 class="student-name">Kamalesh</h4>
@@ -254,7 +252,7 @@
             <a class="student-link last" href="#">
               <img
                 class="student-img"
-                src="img/logos/Linganand.jpg"
+                src="img/logos/Gopika.jpg"
                 alt="Gopika img missing"
               />
               <h4 class="student-name">Gopika</h4>
@@ -270,8 +268,8 @@
 
     <!-- ====================swiper js script=========================== -->
 
-    <script src="script/main.js"></script>
     <script src="script/data.js"></script>
+    <script src="script/main.js"></script>
     <!-- -->
   </body>
 </html>
