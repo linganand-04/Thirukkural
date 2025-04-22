@@ -32,6 +32,8 @@
 /**********************************/
 
 @media (max-width: 1200px) {
+  /* NAVBAR */
+
   .container-profile {
     max-width: 1100px;
     /* Temp */
@@ -82,6 +84,7 @@
   }
 
   .batch-year ul li a {
+    /* width: 95px; */
     width: 145px;
   }
 
@@ -126,6 +129,38 @@
     color: var(--color-white);
   }
 
+  /* KURAL MEANING */
+
+  .format {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .couplets-sets {
+    height: 340px;
+  }
+
+  .kural-sets {
+    width: 600px;
+  }
+
+  .kural-def {
+    height: 300px;
+  }
+
+  .kural-result-box {
+    width: 630px;
+    height: 320px;
+    transform: translate(-112%, 28%);
+  }
+
+  .kural-eng {
+    font-size: 14px;
+  }
+
+  .tamil-small {
+    font-size: 16px;
+  }
+
   /* FOOTER */
 
   .container-footer {
@@ -164,6 +199,66 @@
   .profile-link a:active {
     font-size: 9px;
   }
+
+  /* KURAL*/
+
+  #couplets-search-bar::placeholder {
+    font-size: 12px;
+  }
+
+  .couplets-set-format {
+    width: 350px;
+  }
+
+  .couplets-sets {
+    height: 365px;
+  }
+
+  .kural-def {
+    height: 285px;
+  }
+
+  .kural-sets {
+    width: 500px;
+  }
+
+  .kural-result-box {
+    width: 530px;
+    transform: translate(-133%, 28%);
+  }
+
+  .kural-navbar {
+    width: 75vw;
+  }
+
+  .kural-def {
+    margin: 0;
+  }
+
+  .kural-title {
+    font-size: 15px;
+  }
+
+  .tamil-large {
+    font-size: 18px;
+  }
+
+  .tamil-small {
+    font-size: 14px;
+  }
+
+  .kural-eng {
+    font-size: 12px;
+  }
+
+  .kural-no,
+  .couplets-no {
+    font-size: 12px;
+  }
+
+  .couplets-search-type-show {
+    transform: translate(355%, 35%);
+  }
 }
 
 /**********************************/
@@ -195,9 +290,93 @@
     justify-content: center;
   }
 
-  /* FOOTER */
+  /* KURAL*/
 
-  
+  .format {
+    padding: 0px;
+    grid-template-columns: 1fr;
+  }
+
+  .search-type-title {
+    font-size: 14px;
+  }
+
+.couplets-navbar{
+  margin-bottom:20px;
+}  
+
+  .couplets-section {
+    align-items: center;
+    grid-row: 2;
+    width: 100vw;
+  }
+
+  .couplets-sets {
+    height: 250px;
+  }
+
+  .couplets-set-format-heading {
+    padding: 10px;
+  }
+
+  .couplets-set-format {
+    width: 400px;
+  }
+
+  .kural-container {
+    margin-bottom: 32px;
+  }
+
+  .kural-result-box {
+    width: 650px;
+    transform: translate(-50%, 0%);
+    height: 385px;
+  }
+
+  .kural-navbar {
+    padding: 24px 0;
+    width: 100vw;
+    gap: 0;
+  }
+
+  .kural-search {
+    flex-direction: column;
+    width: 100vw;
+    gap: 32px;
+  }
+
+  .inner-kural-search {
+    margin: 0 auto;
+  }
+
+  .kural-container-inner {
+    width: 100vw;
+  }
+
+  .kural-def {
+    margin: 0 auto;
+    height: 285px;
+  }
+
+  .kural-sets {
+    width: 600px;
+  }
+
+  .quote-eng div p:first-child,
+  .quote-tam div .kural-line-1,
+  .kural-pack div .kural-line-1 {
+    margin-bottom: 3px;
+  }
+
+  .couplets-search-type-show {
+    transform: translate(45%, -570%);
+  }
+
+  hr{
+    display: block;
+  }
+
+  /* FOOTER */
 }
 
 /**********************************/
@@ -227,6 +406,39 @@
     grid-template-columns: 350px;
   }
 
+  /* KURAL */
+
+  .kural-sets {
+    width: 550px;
+  }
+
+  .kural-result-box {
+    width: 570px;
+    transform: translate(-50%, 0%);
+  }
+
+  .kural-def {
+    height: 280px;
+  }
+
+  .couplets-search-type-show {
+    transform: translate(42%, -550%);
+  }
+
+  /* FOOTER */
+
+  .footer h3 {
+    font-size: 14px;
+  }
+
+  .student-img {
+    height: 32px;
+    width: 32px;
+  }
+
+  .student-name {
+    font-size: 12px;
+  }
 }
 /**********************************/
 /* BELOW 545px ( PHONES ) */
@@ -278,9 +490,112 @@
     font-size: 12px;
   }
 
+  /* KURAL */
+
+  .couplets-section {
+    align-items: center;
+    grid-row: 2;
+    width: 100vw;
+  }
+
+  .couplets-set-format {
+    width: 360px;
+  }
+
+  .couplets-sets {
+    height: 250px;
+  }
+
+  .kural-result-box {
+    width: 470px;
+    transform: translate(-50%, 0%);
+    height: 300px;
+  }
+
+  .kural-navbar {
+    padding: 12px 0;
+    gap: 0px;
+    margin-bottom: 12px;
+  }
+
+  .kural-search {
+    gap: 24px;
+  }
+
+  .kural-container-inner {
+    width: 100vw;
+    margin-bottom: 16px;
+  }
+
+  /* .kural-container {
+    margin-bottom: 8px;
+  } */
+
+  .kural-sets {
+    width: 455px;
+    padding: 12px 16px;
+    gap: 16px;
+  }
+
+  .kural-def {
+    padding: 2px;
+    height: 245px;
+  }
+
+  .kural-title {
+    font-size: 16px;
+  }
+
+  .tamil-large {
+    font-size: 18px;
+  }
+
+  .tamil-small {
+    font-size: 12px;
+  }
+
+  .kural-eng {
+    font-size: 11px;
+  }
+
+  .kural-no,
+  .couplets-no {
+    font-size: 10px;
+  }
+
+  .couplets-search-type-show {
+    transform: translate(42%, -420%);
+  }
+
   /* FOOTER */
 
+  .footer h3 {
+    font-size: 14px;
+  }
 
+  .student {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 18px;
+    padding-right: 0;
+    margin-right: 0;
+    border: none;
+  }
+
+  .student-link {
+    padding-right: 0;
+    margin-right: 0;
+    border: none;
+  }
+
+  .student-img {
+    height: 32px;
+    width: 32px;
+  }
+
+  .student-name {
+    font-size: 12px;
+  }
 }
 
 /**********************************/
@@ -304,54 +619,47 @@
     grid-template-columns: 325px;
   }
 
-  /* FOOTER */
+  /* KURAL */
 
-  .container-footer {
-    max-width: 400px;
+  .couplets-set-format {
+    width: 300px;
   }
 
-  .grid-footer {
-    column-gap: 12px;
-  }
-
-  .contact-cols {
-    gap: 6px;
-  }
-
-  .ryde-heading {
-    font-size: 12px;
-  }
-
-  .social-links {
+  .kural-sets {
+    width: 350px;
+    padding: 12px 16px;
     gap: 16px;
   }
 
-  .social-links li svg {
-    height: 16px;
+  .kural-result-box {
+    width: 390px;
+    transform: translate(-50%, 0%);
+    height: 270px;
   }
 
-  .footer-heading {
+  .kural-def {
+    padding: 5px;
+    height: 220px;
+  }
+
+  .tamil-small {
     font-size: 10px;
   }
 
-  .address p {
-    font-size: 10px;
-  }
-
-  .contact p {
-    font-size: 9px;
-    letter-spacing: 1.1px;
-  }
-
-  .nav-menu,
-  .rules-menu {
-    font-size: 9px;
-    letter-spacing: 1.1px;
-  }
-
-  .copyright {
+  .kural-eng {
     font-size: 9px;
   }
+
+  .kural-no,
+  .couplets-no {
+    font-size: 8px;
+  }
+
+  .couplets-search-type-show {
+    transform: translate(42%, -393%);
+  }
+
+  /* FOOTER */
 }
 
 /**********************************/
@@ -372,8 +680,6 @@
   }
 
   /* FOOTER */
-
-
 }
 
 /**********************************/
@@ -382,6 +688,4 @@
 
 @media (max-width: 320px) {
   /* FOOTER */
-
-  
 }
