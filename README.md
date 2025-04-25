@@ -8,14 +8,10 @@ Explore all 1330 couplets (kurals) from the classic Tamil literature **Thirukkur
 
 - ✅ Display of all 1330 Kurals
 - 🌐 Supports Tamil and English translations
-- 🔍 Search functionality (Upcoming)
+- 🔍 Search functionality
 - 📱 Fully responsive for mobile and desktop
 - ⚡ Fast and lightweight interface
 - 🎨 Clean UI with user-friendly design
-
-## 🚀 Live Demo
-
-👉 [View Live Website](https://linganand-04.github.io/Thirukkural)
 
 ## 🛠️ Built With
 
@@ -24,22 +20,22 @@ Explore all 1330 couplets (kurals) from the classic Tamil literature **Thirukkur
 - JavaScript
 - Git & GitHub for version control and deployment
 
-## 📁 Project Structure
+## 👨‍💻 Developed By
 
+- [Linganand](https://github.com/linganand-04)
 
+## 🤝 Contributors
+
+- [Deepika](https://github.com/Deepikavenkatesan2005)
+- [Gopika](https://github.com/gopika200523)
+- [Kamalesh](https://github.com/kamalesh090206)
+
+We thank all contributors for their effort and dedication to this project. ❤️
 
 ## 🤝 Contribution
 
 Pull requests are welcome! If you'd like to improve the project or add features like audio recitation, search, or sorting, feel free to contribute.
 
-## 📸 Screenshots
-
-*(You can add screenshots here by uploading them and using `![Alt Text](path/to/image.png)`)*
-  
-## 📄 License
-
-This project is open-source under the [MIT License](LICENSE).
-
 ---
 
-> Developed with ❤️ by [Linganand](https://github.com/linganand-04) | Powered by Ryde Foundation
+> Developed with ❤️ by [Linganand](https://github.com/linganand-04) and team | Powered by Ryde Foundation
