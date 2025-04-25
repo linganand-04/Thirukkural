@@ -24,13 +24,13 @@ Explore all 1330 couplets (kurals) from the classic Tamil literature **Thirukkur
 
 - [Linganand](https://github.com/linganand-04)
 
-## 🤝 Contributors
+## 💻 Co-developer
 
 - [Deepika](https://github.com/Deepikavenkatesan2005)
 - [Gopika](https://github.com/gopika200523)
 - [Kamalesh](https://github.com/kamalesh090206)
 
-We thank all contributors for their effort and dedication to this project. ❤️
+We thank all Co-developer for their effort and dedication to this project. ❤️
 
 ## 🤝 Contribution
 
