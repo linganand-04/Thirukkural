@@ -64,7 +64,7 @@ function kuralfun01() {
           // document.querySelector(".format").append(newDiv);
 
           kurMean = newDiv;
-          kurMean.style.height = "500px";
+          kurMean.style.height = "475px";
 
           kurMean.insertAdjacentHTML(
             "beforeend",
@@ -554,7 +554,7 @@ fetch("./couplets.json")
             break;
         }
         kuralfun01();
-        console.log(limit);
+        // console.log(limit);
       });
     });
   })

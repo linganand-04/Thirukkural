@@ -25,6 +25,10 @@
     margin-left: 20px;
     margin-right: 220px;
   }
+
+  .kural-topic {
+    margin-right: 5%;
+  }
 }
 
 /**********************************/
@@ -139,6 +143,10 @@
     height: 340px;
   }
 
+  .kural-topic {
+    margin-right: 12%;
+  }
+
   .kural-sets {
     width: 600px;
   }
@@ -148,9 +156,9 @@
   }
 
   .kural-result-box {
-    width: 630px;
+    width: 640px;
     height: 320px;
-    transform: translate(-112%, 28%);
+    transform: translate(-113%, 28%);
   }
 
   .kural-eng {
@@ -159,6 +167,19 @@
 
   .tamil-small {
     font-size: 16px;
+  }
+
+  /* OVERLAY */
+
+  .kural-meaning {
+    width: 1060px;
+    max-width: 1100px;
+    transform: translate(-42%, -29%);
+    padding: 0;
+  }
+
+  .format {
+    padding-left: 12px;
   }
 
   /* FOOTER */
@@ -214,6 +235,10 @@
     height: 365px;
   }
 
+  .kural-topic {
+    margin-right: 15%;
+  }
+
   .kural-def {
     height: 285px;
   }
@@ -259,6 +284,38 @@
   .couplets-search-type-show {
     transform: translate(355%, 35%);
   }
+
+  .couplets {
+    font-size: 13px;
+  }
+
+  /* OVERLAY */
+
+  .kural-meaning {
+    width: 950px;
+    transform: translate(-41%, -30%);
+    padding: 0;
+  }
+
+  .meaning {
+    padding: 0 32px 0 24px;
+}
+
+  .kural-tamil,
+  .kural-english {
+    padding: 12px 0px;
+  }
+
+  .meaning-eng,
+  .quote-eng {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .kural-cancel {
+    right: 8%;
+    top: 10%;
+  }
 }
 
 /**********************************/
@@ -301,9 +358,9 @@
     font-size: 14px;
   }
 
-.couplets-navbar{
-  margin-bottom:20px;
-}  
+  .couplets-navbar {
+    margin-bottom: 20px;
+  }
 
   .couplets-section {
     align-items: center;
@@ -325,6 +382,10 @@
 
   .kural-container {
     margin-bottom: 32px;
+  }
+
+  .kural-topic {
+    margin-right: 0;
   }
 
   .kural-result-box {
@@ -362,6 +423,11 @@
     width: 600px;
   }
 
+  .kural-tamil,
+  .kural-english {
+    padding: 32px;
+  }
+
   .quote-eng div p:first-child,
   .quote-tam div .kural-line-1,
   .kural-pack div .kural-line-1 {
@@ -372,8 +438,24 @@
     transform: translate(45%, -570%);
   }
 
-  hr{
+  hr {
     display: block;
+  }
+
+  /* OVERLAYS */
+
+  .kural-meaning {
+    width: 700px;
+    transform: translate(7%, -40%);
+  }
+
+  .meaning {
+    padding: 0 24px 0 0;
+  }
+
+  .quote-tam,
+  .quote-eng {
+    width: 550px;
   }
 
   /* FOOTER */
@@ -412,6 +494,10 @@
     width: 550px;
   }
 
+  .kural-topic {
+    margin-right: 0;
+  }
+
   .kural-result-box {
     width: 570px;
     transform: translate(-50%, 0%);
@@ -423,6 +509,29 @@
 
   .couplets-search-type-show {
     transform: translate(42%, -550%);
+  }
+
+  /* OVERLAYS */
+
+  .kural-meaning {
+    width: 650px;
+    margin: 0 auto;
+    transform: translate(2%, -40%);
+  }
+
+  .kural-tamil,
+  .kural-english {
+    padding: 16px 0 0 0;
+  }
+
+  .kural-cancel {
+    right: 11%;
+    top: 7%;
+  }
+
+  .kural-eng-box,
+  .kural-tam-box {
+    padding: 8px;
   }
 
   /* FOOTER */
@@ -440,6 +549,23 @@
     font-size: 12px;
   }
 }
+
+/**********************************/
+/* BELOW 615px ( SMALLER TABLETS ) */
+/**********************************/
+
+@media (max-width: 615px) {
+  .kural-meaning {
+    width: 580px;
+    transform: translate(1%, -40%);
+  }
+
+  .quote-tam,
+  .quote-eng {
+    width: 500px;
+  }
+}
+
 /**********************************/
 /* BELOW 545px ( PHONES ) */
 /**********************************/
@@ -567,6 +693,51 @@
     transform: translate(42%, -420%);
   }
 
+  .couplets {
+    font-size: 11px;
+  }
+
+  /* OVERLAYS */
+
+  .kural-meaning {
+    width: 525px;
+    transform: translate(-6%, -30%);
+    gap: 0;
+  }
+
+  .meaning {
+    padding: 0 24px 0 32px;
+}
+
+  .kural-tamil, .kural-english {
+    padding: 0;
+}
+
+  .kural-cancel {
+    width: 24px;
+    height: 24px;
+    top:1%;
+  }
+
+  .quote-tam,
+  .quote-eng {
+    width: 380px;
+  }
+
+  .meaning-eng, .quote-eng {
+    font-size: 11px;
+  }
+
+  .tamil-large{
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  
+  .kural-heading{
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+
   /* FOOTER */
 
   .footer h3 {
@@ -659,6 +830,22 @@
     transform: translate(42%, -393%);
   }
 
+  .couplets {
+    font-size: 10px;
+  }
+
+  /* OVERLAYS */
+
+  .kural-meaning {
+    width: 440px;
+    transform: translate(-6%, -30%);
+    height: 400px;
+  }
+
+  .meaning-eng, .quote-eng {
+    font-size: 9px;
+  }
+
   /* FOOTER */
 }
 
@@ -678,6 +865,18 @@
   .grid--3--cols {
     grid-template-columns: 300px;
   }
+
+  /* OVERLAYS */
+
+  .kural-meaning {
+    width: 425px;
+    transform: translate(-8%, -30%);
+    height: 400px;
+  }
+
+  .quote-tam, .quote-eng {
+    width: 340px;
+}
 
   /* FOOTER */
 }

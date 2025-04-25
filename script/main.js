@@ -7,30 +7,25 @@
 
 // SEARCH SCROLL NAVIGATOR USING ONCLICK //
 
-const searchOnclick = document.querySelector("#couplets-search-bar")
+const searchOnclick = document.querySelector("#couplets-search-bar");
 const scrollsearch = document.getElementById("scrollsearch");
 
-const scrollCouplets = document.querySelector(".couplets-section")
+const scrollCouplets = document.querySelector(".couplets-section");
 
-function onclickScroll(){
-  searchOnclick.addEventListener("click",(e)=>{
-    console.log(searchOnclick);
-    // if (scrollsearch.href==="http://127.0.0.1:5501/thirukkural.html") {
-      console.log("J");
-      scrollsearch.setAttribute("href","#tempscroll")
-      console.log(scrollsearch.href)
-    
-    // }
-    if (scrollsearch.href==="http://127.0.0.1:5501/thirukkural.html#tempscroll") {
-      console.log("Hii");
-    }
-  })
+function onclickScroll() {
+  searchOnclick.addEventListener("click", (e) => {
+    const yOffset = -100; // adjust based on your header height
+    const y =
+    searchOnclick.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" }
+    );
+  });
 }
 
 
 function checkScreenWidth() {
   if (window.innerWidth < 900) {
-    onclickScroll()
+    onclickScroll();
   }
 }
 
@@ -39,6 +34,7 @@ checkScreenWidth();
 
 // Run on resize
 window.addEventListener("resize", checkScreenWidth);
+
 
 // BATCH ONCLICK //
 
@@ -170,7 +166,7 @@ coupFilterEng.addEventListener("click", () => {
   tickEng.classList.add("show");
   tickTam.classList.remove("show");
   tickNo.classList.remove("show");
-  console.log(coupletsFilter);
+  // console.log(coupletsFilter);
 });
 
 coupFilterTam.addEventListener("click", () => {
@@ -179,7 +175,7 @@ coupFilterTam.addEventListener("click", () => {
   tickTam.classList.add("show");
   tickEng.classList.remove("show");
   tickNo.classList.remove("show");
-  console.log(coupletsFilter);
+  // console.log(coupletsFilter);
 });
 
 coupFilterNo.addEventListener("click", () => {
@@ -188,11 +184,11 @@ coupFilterNo.addEventListener("click", () => {
   tickNo.classList.add("show");
   tickEng.classList.remove("show");
   tickTam.classList.remove("show");
-  console.log(coupletsFilter);
+  // console.log(coupletsFilter);
 });
 function meaning(thirukkural, index) {
   let kuralMean = document.querySelector(".kural-meaning");
-  console.log(kuralMean);
+  // console.log(kuralMean);
   // Temp //
   // kuralMean.remove();
 
@@ -342,7 +338,7 @@ fetch("./couplets.json")
 
         let filterData = kuralCouplets.filter((couplets) => {
           if (coupletsFilter === "english") {
-            console.log(couplets.title_eng);
+            // console.log(couplets.title_eng);
             return couplets.title_eng
               .toLowerCase()
               .includes(inputData.toLowerCase());
@@ -356,7 +352,7 @@ fetch("./couplets.json")
           }
         });
 
-        console.log(filterData);
+        // console.log(filterData);
 
         coupletPost = [];
         displayItems(filterData); // Ensure displayItems() is defined
@@ -389,7 +385,7 @@ const displayItems = (items) => {
       coupletsShow.forEach((value) => {
         value.classList.remove("active");
       });
-      console.log(element.classList);
+      // console.log(element.classList);
       element.classList.add("active");
 
       displayItems(items);
@@ -845,7 +841,7 @@ kuralInput.addEventListener("keyup", (e) => {
           }
         });
 
-        console.log(filterData);
+        // console.log(filterData);
 
         KuralPost = [];
         displayKural(filterData);

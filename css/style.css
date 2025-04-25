@@ -563,7 +563,7 @@ nav button {
   /* background: linear-gradient(135deg, #d1fae5, #fef3c7); */
   /* background: linear-gradient(135deg, #fdd9d4, #ffe9c9); */
   /* background: linear-gradient(135deg, #dfe9f3, #fce1e4); */
-  background: linear-gradient(120deg, #a6fdd0, #92ffde,#58b7c6);
+  background: linear-gradient(120deg, #a6fdd0, #92ffde, #58b7c6);
   box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
   color: black;
 }
@@ -622,6 +622,11 @@ nav button {
   grid-column: span 3 / span 3;
 } */
 
+/* .height{
+  height: 500px;
+  overflow-y: scroll;
+} */
+
 .kural-meaning {
   display: flex;
   flex-direction: column;
@@ -632,17 +637,18 @@ nav button {
   background: whitesmoke;
   /* Temp */
   /* background: pink; */
-  top: -130px;
+  /* top: -130px;
+  left: -460px; */
+  transform: translate(-38%, -31%);
   width: 1200px;
-  left: -460px;
   z-index: 10;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .kural-cancel {
   position: absolute;
-  top: 4%;
-  right: 3%;
+  top: 7%;
+  right: 5%;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -652,7 +658,7 @@ nav button {
   z-index: 11;
 }
 
-.kural-cancel svg{
+.kural-cancel svg {
   fill: white;
 }
 
@@ -667,17 +673,18 @@ nav button {
   display: inline-block;
 }
 
-.kural-tam-box{
-  padding: 24px 12px;
-    /* background: linear-gradient(45deg, #fed8b9,#9fd6de,#b3c1f7); */
-    /* background: linear-gradient(60deg,#63e6be,#58b7c6, #8ce99a); */
-    /* background: linear-gradient(120deg, #b3e6bc, #c8f5f1,#9fd6de); */
-    background: linear-gradient(170deg,#d9e0fb,#88ccd6,#a0e0ab,#a3efe8);
+.kural-tam-box {
+  padding: 24px;
+  /* background: linear-gradient(45deg, #fed8b9,#9fd6de,#b3c1f7); */
+  /* background: linear-gradient(60deg,#63e6be,#58b7c6, #8ce99a); */
+  /* background: linear-gradient(120deg, #b3e6bc, #c8f5f1,#9fd6de); */
+  /* background: linear-gradient(170deg, #d9e0fb, #88ccd6, #a0e0ab, #a3efe8); */
 }
 
-.kural-eng-box{
-  padding: 24px 12px;
-  background: linear-gradient(120deg, #b3e6bc, #c8f5f1,#9fd6de);}
+.kural-eng-box {
+  padding: 24px;
+  /* background: linear-gradient(120deg, #b3e6bc, #c8f5f1, #9fd6de); */
+}
 
 .kural-tamil,
 .kural-english {
@@ -803,7 +810,7 @@ nav button {
   color: white;
 }
 
-.temscroll{
+.temscroll {
   display: none;
   margin-bottom: 100px;
 }
